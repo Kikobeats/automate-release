@@ -20,7 +20,7 @@ For your next release, it will be automatically doing:
 
 Let me show you how to.
 
-## Git commit that matters
+## Git commit convention
 
 The most basic thing is to define a git commit convention to follow.
 
@@ -36,7 +36,7 @@ If the format is invalid, you **can't** do the commit.
 
 <small>(Actually, you can use `--no-verify` ).</small>
 
-### Commit Message Guidelines
+## Commit Message Guidelines
 
 > See more on [Angular contribution guideline](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type).
 
@@ -58,7 +58,7 @@ The first time you use a convention for commits you think it's *over engineering
 
 But after a time, it's **very helpful**. It makes easy read all the commits quickly or just focus in a determinate type of commits.
 
-### Examples
+## Examples of git commits
 
 All the following examples are common and valid:
 
@@ -71,3 +71,29 @@ test: update snapshots
 style: use space instead of tabs
 ```
 
+## Determinating the next version
+
+As I said, the next version will be automatically determinated based in your git messages.
+
+
+**patches** (`1.0.0` → `1.0.1`)
+
+```sh
+git commit -a -m "fix(parsing): fixed a bug in our parser"
+```
+
+**features** (`1.0.0` → `1.1.0`)
+
+```sh
+git commit -a -m "feat(parser): we now have a parser \o/"
+```
+
+**breaking changes** (`1.0.0` → `2.0.0`)
+
+```sh
+git commit -a -m "feat(new-parser): introduces a new parsing library
+BREAKING CHANGE: new library does not support foo-construct"
+```
+
+In addition, GitHub usernames (`@kikobeats`) and issue references (`#133`) will be swapped out for the
+appropriate URLs in your `CHANGELOG.md`.
