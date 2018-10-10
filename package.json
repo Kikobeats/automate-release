@@ -3,6 +3,7 @@
   "description": "",
   "version": "0.1.0",
   "main": "index.js",
+  "private": true,
   "author": "",
   "keywords": [],
   "devDependencies": {
@@ -12,7 +13,8 @@
     "standard-version": "~4.4.0"
   },
   "scripts": {
-    "release": "standard-version"
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master"
   },
   "license": "MIT",
   "commitlint": {
