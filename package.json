@@ -20,10 +20,12 @@
   },
   "scripts": {
     "postrelease": "npm run release:tags && npm run release:github",
-    "prerelease": "git-authors-cli",
+    "prerelease": "npm run update:check && git-authors-cli",
     "release": "git add package.json && standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git push --follow-tags origin master"
+    "release:tags": "git push --follow-tags origin master",
+    "update": "ncu -a",
+    "update:check": "ncu -- --error-level 2"
   },
   "private": true,
   "license": "MIT",
