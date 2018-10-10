@@ -1,4 +1,4 @@
-# Automate your releases
+# Automatize your releases
 
 A release is just a number; It doesn't matter too much, but the important is have one.
 
@@ -127,7 +127,7 @@ The successive versions will increment the file adding a new entry.
 
 ## GitHub Release
 
-> **Tip**: I recommend use [direnv](https://direnv.net/) for save your local development variables. 
+> **Tip**: Use [direnv](https://direnv.net/) for declaring local development variables. 
 
 GitHub (and GitLab as well) has an special space into the repository page for seeing the releases.
 
