@@ -1,4 +1,4 @@
-# Automatize your releases
+# Automate your releases
 
 A release is just a number; It doesn't matter too much, but the important is have one.
 
@@ -137,8 +137,7 @@ When you create a new git tag, it will show there, but as you can see it doesn't
 
 We are going to use a tool called [releaser-tools](https://github.com/conventional-changelog/releaser-tools) that will connect with GitHub/GitLab and setup a pretty release.
 
-
-![](https://i.imgur.com/4Am8xIx.png)
+For do that, we are going to declare it as part of our `postrelease` tasks:
 
 ```json
 {
@@ -148,4 +147,9 @@ We are going to use a tool called [releaser-tools](https://github.com/convention
   "release:github": "conventional-github-releaser -p angular",
   "release:tags": "git push --follow-tags origin master"
   }
-  ```
+```
+
+Next time, your metadata will associated with the GitHub/GitLab release 🎉
+
+![](https://i.imgur.com/4Am8xIx.png)
+
