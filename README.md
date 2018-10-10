@@ -16,13 +16,13 @@ For your next release, it will be automatically doing:
 - [x] Create a new git tag.
 - [x] Create a `CHANGELOG.md`e entry associated with your tag.
 - [x] Create a GitHub Release.
-- [ ] Write a Slack message about the release.
+- [x] Communicate the new version at Slack, Twitter, etc.
 
 Let me show you how to.
 
 ## Git commit convention
 
-> **Tip**: You can use a different [convention configuration](https://github.com/marionebl/commitlint#shared-configuration).,
+> **Tip**: You can use a different [convention configuration](https://github.com/marionebl/commitlint#shared-configuration).
 
 The most basic thing is to define a git commit convention to follow.
 
@@ -153,3 +153,30 @@ Next time, your metadata will associated with the GitHub/GitLab release 🎉
 
 ![](https://i.imgur.com/4Am8xIx.png)
 
+## Communicate your changes
+
+> **Tip**: Use [tom](http://tom.js.org/) for sending multiple notification (Slack/Twitter/Telegram/Email).
+
+It's the moment to make your changes public for the general public.
+
+First, we need to retrieve our latest release published. 
+
+In the case of GitHub, we can use:
+
+**GitHub API**
+
+<blockquote>
+<p>e.g. <a href="https://api.github.com/repos/Kikobeats/automatic-release/releases/latest">https://api.github.com/repos/Kikobeats/automatic-release/releases/latest</a></p>
+</blockquote>
+
+**GitHub RSS Feed**
+
+> e.g. [https://github.com/Kikobeats/automatic-release/releases.atom](https://github.com/Kikobeats/automatic-release/releases.atom)
+
+Then, just we need to connect our release data with the service where we want to share the information.
+
+This can be as simple as creating a [IFTTT](https://ifttt.com) recipe
+
+<div align="center">
+<img src="https://i.imgur.com/ZgUB7w5.png" width='200px' />
+</div>
