@@ -71,10 +71,11 @@ test: update snapshots
 style: use space instead of tabs
 ```
 
-## Determinating the next version
+## Determinate the next version
 
-As I said, the next version will be automatically determinated based in your git messages.
+After follow a git commit schema, we are going to use [standard-version](https://github.com/conventional-changelog/standard-version) 
 
+It will read your git history and will determinate what is the next version to release.
 
 **patches** (`1.0.0` → `1.0.1`)
 
@@ -97,3 +98,13 @@ BREAKING CHANGE: new library does not support foo-construct"
 
 In addition, GitHub usernames (`@kikobeats`) and issue references (`#133`) will be swapped out for the
 appropriate URLs in your `CHANGELOG.md`.
+
+For do that, add `npm run release` as a npm script associated with `release`:
+
+```json
+"scripts": {
+  "release": "standard-version"
+}
+```
+
+Your next release will be created after type `npm run release` 🤖.

@@ -1,17 +1,18 @@
 {
   "name": "@public/test",
   "description": "",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "index.js",
   "author": "",
   "keywords": [],
   "devDependencies": {
     "@commitlint/cli": "~7.2.0",
     "@commitlint/config-conventional": "~7.1.2",
-    "husky": "~1.1.1"
+    "husky": "~1.1.1",
+    "standard-version": "~4.4.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "standard-version"
   },
   "license": "MIT",
   "commitlint": {
