@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/Kikobeats/automatic-release/compare/v0.4.2...v0.5.0) (2018-10-10)
+
+
+### Features
+
+* add git-authors ([c786e3e](https://github.com/Kikobeats/automatic-release/commit/c786e3e))
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/Kikobeats/automatic-release/compare/v0.4.1...v0.4.2) (2018-10-10)
 
