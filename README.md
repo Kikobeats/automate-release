@@ -113,3 +113,11 @@ Then just do `npm run release` for releasing a new version
 ![](https://i.imgur.com/AmOfMV9.png)
 
 Note that `prerelease` is not mandatory but it will push your released version.
+
+
+
+The first time you release a version, a `CHANGELOG.md` will created.
+
+![](https://i.imgur.com/B2CoFsG.png)
+
+The successive versions will increment the file adding a new entry.
