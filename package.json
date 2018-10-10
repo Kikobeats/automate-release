@@ -7,19 +7,13 @@
     "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats"
   },
-  "contributors": [
-    {
-      "name": "Kiko Beats",
-      "email": "josefrancisco.verdu@gmail.com"
-    }
-  ],
   "keywords": [],
   "devDependencies": {
     "@commitlint/cli": "~7.2.0",
     "@commitlint/config-conventional": "~7.1.2",
     "conventional-github-releaser": "~3.1.2",
     "finepack": "~2.8.1",
-    "git-authors-cli": "~1.0.4",
+    "git-authors-cli": "~1.0.5",
     "husky": "~1.1.1",
     "lint-staged": "~7.3.0",
     "standard-version": "~4.4.0"
