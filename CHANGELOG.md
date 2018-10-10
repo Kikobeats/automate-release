@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/Kikobeats/automatic-release/compare/v0.1.0...v0.2.0) (2018-10-10)
+
+
+### Features
+
+* add postrelease script ([01de80f](https://github.com/Kikobeats/automatic-release/commit/01de80f))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-10-10)
 
