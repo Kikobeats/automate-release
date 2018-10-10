@@ -104,19 +104,20 @@ appropriate URLs in your `CHANGELOG.md`.
 For do that, add `npm run release` as a npm script associated with `release`:
 
 ```json
-"scripts": {
-  "release": "standard-version"
-  "postrelease": "git push --follow-tags origin master"
+{
+  "scripts": {
+    "release": "standard-version",
+    "release:tags": "git push --follow-tags origin master",
+    "postrelease": "npm run release:tags"
+  }
 }
 ```
+
+Note that `postrelease` is not mandatory but it will push your git tags.
 
 Then just do `npm run release` for releasing a new version
 
 ![](https://i.imgur.com/AmOfMV9.png)
-
-Note that `prerelease` is not mandatory but it will push your released version.
-
-
 
 The first time you release a version, a `CHANGELOG.md` will created.
 
@@ -137,3 +138,14 @@ When you create a new git tag, it will show there, but as you can see it doesn't
 We are going to use a tool called [releaser-tools](https://github.com/conventional-changelog/releaser-tools) that will connect with GitHub/GitLab and setup a pretty release.
 
 
+![](https://i.imgur.com/4Am8xIx.png)
+
+```json
+{
+  "scripts": {
+  "postrelease": "npm run release:tags && npm run release:github",
+  "release": "standard-version",
+  "release:github": "conventional-github-releaser -p angular",
+  "release:tags": "git push --follow-tags origin master"
+  }
+  ```
