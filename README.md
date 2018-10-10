@@ -12,9 +12,9 @@ Nowadays, we have the best tools ever dreamed to automate this task.
 
 For your next release, it will be automatically doing:
 
-- [ ] Create a commit release in the git history.
-- [ ] Create a new git tag.
-- [ ] Create a `CHANGELOG.md`e entry associated with your tag.
+- [x] Create a commit release in the git history.
+- [x] Create a new git tag.
+- [x] Create a `CHANGELOG.md`e entry associated with your tag.
 - [ ] Create a GitHub release.
 - [ ] Write a Slack message about the release.
 
@@ -104,7 +104,12 @@ For do that, add `npm run release` as a npm script associated with `release`:
 ```json
 "scripts": {
   "release": "standard-version"
+  "postrelease": "git push --follow-tags origin master"
 }
 ```
 
-Your next release will be created after type `npm run release` 🤖.
+Then just do `npm run release` for releasing a new version
+
+![](https://i.imgur.com/AmOfMV9.png)
+
+Note that `prerelease` is not mandatory but it will push your released version.
