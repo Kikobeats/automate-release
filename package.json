@@ -23,7 +23,8 @@
   },
   "scripts": {
     "postrelease": "npm run release:tags && npm run release:github",
-    "release": "standard-version",
+    "prerelease": "git-authors-cli",
+    "release": "git add package.json && standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin master"
   },
