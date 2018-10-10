@@ -6,7 +6,7 @@ If you are not releasing your software, then it will be complicated to rollback 
 
 But the real problem will be from a **user perspective**: It will not be easy to make evident what has changed.
 
-Most of the problem with releasing software is because developers don't do that often: They tend to run it manually, making releasing process a source of errors and problems.
+Most of the problem with releasing software is because developers don't do that often: They tend to run it manually, making the releasing process a source of errors and problems.
 
 Nowadays, we have the best tools ever dreamed to automate this task.
 
@@ -14,7 +14,7 @@ For your next release, it will be automatically doing:
 
 - [x] Create a commit release in the git history.
 - [x] Create a new git tag.
-- [x] Create a `CHANGELOG.md`e entry associated with your tag.
+- [x] Create a `CHANGELOG` entry associated with your tag.
 - [x] Create a GitHub Release.
 - [x] Communicate the new version at Slack, Twitter, etc.
 
@@ -42,7 +42,7 @@ If the format is invalid, you **can't** do the commit.
 
 > **Tip**: Read more on [Angular contribution guideline](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type).
 
-The git message must to have a **type**, it can be ne of the following:
+The git message must to have a **type**, it can be one of the following:
 
 * **build**: Changes that affect the build system or external dependencies.
 * **ci**: Changes to our CI configuration files and scripts.
@@ -50,7 +50,7 @@ The git message must to have a **type**, it can be ne of the following:
 * **feat**: A new feature.
 * **fix**: A bug fix.
 * **perf**: A code change that improves performance.
-* **refactor**: A code change that neither fixes a bug nor adds a feature.
+* **refactor**: A code change that neither fixes a bug or adds a feature.
 * **style**: Changes that do not affect the meaning of the code.
 * **test**: Adding missing tests or correcting existing tests.
 
@@ -75,7 +75,7 @@ style: use space instead of tabs
 
 ## Determinate the next version
 
-After follow a git commit schema, we are going to use [standard-version](https://github.com/conventional-changelog/standard-version) 
+After following a git commit schema, we are going to use [standard-version](https://github.com/conventional-changelog/standard-version) 
 
 It will read your git history and will determinate what is the next version to release.
 
@@ -101,7 +101,7 @@ BREAKING CHANGE: new library does not support foo-construct"
 In addition, GitHub usernames (`@kikobeats`) and issue references (`#133`) will be swapped out for the
 appropriate URLs in your `CHANGELOG.md`.
 
-For do that, add `npm run release` as a npm script associated with `release`:
+For do that, add `npm run release` as npm script associated with `release`:
 
 ```json
 {
@@ -119,7 +119,7 @@ Then just do `npm run release` for releasing a new version
 
 ![](https://i.imgur.com/AmOfMV9.png)
 
-The first time you release a version, a `CHANGELOG.md` will created.
+The first time you release a version, a `CHANGELOG.md` will be created.
 
 ![](https://i.imgur.com/B2CoFsG.png)
 
@@ -129,7 +129,7 @@ The successive versions will increment the file adding a new entry.
 
 > **Tip**: Use [direnv](https://direnv.net/) for declaring local development variables. 
 
-GitHub (and GitLab as well) has an special space into the repository page for seeing the releases.
+GitHub (and GitLab as well) has a special space into the repository page for seeing the releases.
 
 ![](https://i.imgur.com/butKsZ6.png)
 
@@ -149,7 +149,7 @@ For do that, we are going to declare it as part of our `postrelease` tasks:
   }
 ```
 
-Next time, your metadata will associated with the GitHub/GitLab release 🎉
+Next time, your metadata will be associated with the GitHub/GitLab release 🎉
 
 ![](https://i.imgur.com/4Am8xIx.png)
 
@@ -175,7 +175,7 @@ In the case of GitHub, we can use:
 
 Then, just we need to connect our release data with the service where we want to share the information.
 
-This can be as simple as creating a [IFTTT](https://ifttt.com) recipe
+This can be as simple as creating an [IFTTT](https://ifttt.com) recipe
 
 <div align="center">
 <img src="https://i.imgur.com/ZgUB7w5.png" width='200px' />
