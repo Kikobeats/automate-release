@@ -3,13 +3,10 @@
   "description": "",
   "version": "0.5.1",
   "main": "index.js",
-  "author": "",
-  "contributors": [
-    {
-      "name": "Kiko Beats",
-      "email": "josefrancisco.verdu@gmail.com"
-    }
-  ],
+  "author": {
+    "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats"
+  },
   "keywords": [],
   "devDependencies": {
     "@commitlint/cli": "~7.2.0",
