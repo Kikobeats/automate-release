@@ -1,7 +1,7 @@
 {
   "name": "@public/test",
   "description": "",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "private": true,
   "author": "",
