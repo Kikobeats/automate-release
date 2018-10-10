@@ -15,12 +15,14 @@ For your next release, it will be automatically doing:
 - [x] Create a commit release in the git history.
 - [x] Create a new git tag.
 - [x] Create a `CHANGELOG.md`e entry associated with your tag.
-- [ ] Create a GitHub release.
+- [x] Create a GitHub Release.
 - [ ] Write a Slack message about the release.
 
 Let me show you how to.
 
 ## Git commit convention
+
+> **Tip**: You can use a different [convention configuration](https://github.com/marionebl/commitlint#shared-configuration).,
 
 The most basic thing is to define a git commit convention to follow.
 
@@ -38,7 +40,7 @@ If the format is invalid, you **can't** do the commit.
 
 ## Commit Message Guidelines
 
-> See more on [Angular contribution guideline](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type).
+> **Tip**: Read more on [Angular contribution guideline](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type).
 
 The git message must to have a **type**, it can be ne of the following:
 
@@ -121,3 +123,17 @@ The first time you release a version, a `CHANGELOG.md` will created.
 ![](https://i.imgur.com/B2CoFsG.png)
 
 The successive versions will increment the file adding a new entry.
+
+## GitHub Release
+
+> **Tip**: I recommend use [direnv](https://direnv.net/) for save your local development variables. 
+
+GitHub (and GitLab as well) has an special space into the repository page for seeing the releases.
+
+![](https://i.imgur.com/butKsZ6.png)
+
+When you create a new git tag, it will show there, but as you can see it doesn't have information attached.
+
+We are going to use a tool called [releaser-tools](https://github.com/conventional-changelog/releaser-tools) that will connect with GitHub/GitLab and setup a pretty release.
+
+
