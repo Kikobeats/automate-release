@@ -1,5 +1,5 @@
 {
-  "name": "@public/test",
+  "name": "automatic-release",
   "description": "",
   "version": "0.5.4",
   "main": "index.js",
