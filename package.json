@@ -1,12 +1,18 @@
 {
   "name": "@public/test",
   "description": "",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "main": "index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats"
   },
+  "contributors": [
+    {
+      "name": "Joseba Legarreta",
+      "email": "josebalega@gmail.com"
+    }
+  ],
   "keywords": [],
   "devDependencies": {
     "@commitlint/cli": "~7.2.0",
