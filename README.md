@@ -20,7 +20,7 @@ Your next release will be automatically doing:
 
 Let me show you how to do it.
 
-## Git commit convention
+## Git Commit Convention
 
 > **Tip**: You can use a different [convention configuration](https://github.com/marionebl/commitlint#shared-configuration).
 
@@ -58,7 +58,7 @@ I know. really, I know.
 
 The first time you use a convention for commits, you might think that it's **over-engineering**. But it's **very helpful**, it makes easy read all the commits quickly or just focus in a determinate type of commits.
 
-## Examples of git commits
+## Examples of Git Commits
 
 All the following examples are usual and valid:
 
@@ -71,7 +71,7 @@ test: update snapshots
 style: use space instead of tabs
 ```
 
-## Determinate the next version
+## Determinate the Next Version
 
 After following a git commit schema, we are going to use: [standard-version](https://github.com/conventional-changelog/standard-version). After reading your git history and it will determinate what is the next release version.
 
@@ -119,7 +119,15 @@ The first time you release a version, a `CHANGELOG.md` will be created.
 
 ![](https://i.imgur.com/B2CoFsG.png)
 
-The successive versions will increment the file adding a new entry.
+The file follow The format is based on [Keep a Changelog](https://keepachangelog.com) specification.
+
+The next time you release a new version, it will increment the file, adding a new entry.
+
+This allows you add extra information into `CHANGELOG.md` and it will not be overwritten in your next release.
+
+![](https://i.imgur.com/QOse3tZ.png)
+
+A good practice is to add a resume in human readable format explaining what's new in this version.
 
 ## GitHub Release
 
