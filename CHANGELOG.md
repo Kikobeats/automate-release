@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="0.5.5"></a>
 ## [0.5.5](https://github.com/Kikobeats/automatic-release/compare/v0.5.4...v0.5.5) (2018-10-12)
 
+A new version come out 🎉
+
+This new version has mainly related with improve the scripts we use.
 
 ### Bug Fixes
 
@@ -15,7 +18,9 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="0.5.4"></a>
 ## [0.5.4](https://github.com/Kikobeats/automatic-release/compare/v0.5.3...v0.5.4) (2018-10-11)
 
-The project has been improved quickly in a short period of time
+A better version come out 💥
+
+We fixed the gramar of project, describing better the concepts.
 
 ### Bug Fixes
 
