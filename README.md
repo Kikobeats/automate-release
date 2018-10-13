@@ -1,5 +1,7 @@
 # Automate your releases
 
+> **Tip** Install it with `npx automate-release` 🎉.
+
 A release might seem just an irrelevant number, but here you'll find why you should be using it.
 
 If you are not releasing your software, then it will be complicated to rollback and differentiate changes between versions.
