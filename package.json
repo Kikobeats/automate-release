@@ -1,6 +1,6 @@
 {
   "name": "automate-release",
-  "description": "",
+  "description": "No more manual work in your software releases.",
   "version": "0.7.0",
   "main": "index.js",
   "bin": {
@@ -16,7 +16,15 @@
       "email": "josebalega@gmail.com"
     }
   ],
-  "keywords": [],
+  "keywords": [
+    "automate",
+    "automatic",
+    "changelog",
+    "commitlint",
+    "conventional",
+    "release",
+    "standard-version"
+  ],
   "dependencies": {
     "chalk": "~2.4.1",
     "exists-file": "~3.0.2",
