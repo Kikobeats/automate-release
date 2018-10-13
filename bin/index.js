@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict'
 
 const { get, forEach, set } = require('lodash')
