@@ -3,10 +3,11 @@
 'use strict'
 
 const { get, forEach, set } = require('lodash')
+const { white, red, gray } = require('chalk')
 const existsFile = require('exists-file')
 const jsonFuture = require('json-future')
-const { white, red, gray } = require('chalk')
 const path = require('path')
+const fs = require('fs')
 
 const rootPkg = require('../package.json')
 
@@ -14,7 +15,7 @@ require('update-notifier')({ pkg: rootPkg }).notify()
 
 const cli = require('meow')({
   pkg: rootPkg,
-  help: require('./help'),
+  help: fs.readFileSync(path.resolve(__dirname, '..', 'README.md'), 'utf-8'),
   flags: {
     cwd: {
       type: 'string',

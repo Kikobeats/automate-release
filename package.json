@@ -46,6 +46,7 @@
     "standard-version": "latest"
   },
   "files": [
+    "README.md",
     "bin"
   ],
   "scripts": {
