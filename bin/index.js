@@ -72,6 +72,14 @@ const install = async ({ cwd }) => {
   console.log(gray(` ${white('automatic-release')} installed 🎉`))
   console.log()
   console.log(gray(` Perform an \`${white('npm install')}\` to finish it.`))
+  console.log()
+  console.log(
+    gray(
+      ` Remember to declare \`${white('CONVENTIONAL_GITHUB_RELEASER_TOKEN')}\`.`
+    )
+  )
+
+  console.log(gray(` See how to: ${white('https://git.io/fxRUv')}`))
 }
 
 install(cli.flags).catch(processError)
