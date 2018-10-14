@@ -52,7 +52,7 @@ const install = async ({ cwd }) => {
       'commitlint.extends',
       'husky.hooks.commit-msg',
       'husky.hooks.pre-commit',
-      'lint-staged.linters.package.json',
+      ['lint-staged', 'linters', 'package.json'],
       'standard-version.scripts.prechangelog',
       'devDependencies.@commitlint/cli',
       'devDependencies.@commitlint/config-conventional',
