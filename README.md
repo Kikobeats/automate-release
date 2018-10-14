@@ -153,6 +153,7 @@ To do that, we are going to declare it as a part of our `postrelease` tasks:
   "release:github": "conventional-github-releaser -p angular",
   "release:tags": "git push --follow-tags origin master"
   }
+}
 ```
 
 Next time, your metadata will be associated with the GitHub/GitLab release 🎉

@@ -35,6 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
@@ -51,7 +52,7 @@
   ],
   "scripts": {
     "lint": "standard-markdown && standard",
-    "postrelease": "npm run release:tags && npm run release:github && npm publish",
+    "postrelease": "npm run release:tags && npm run release:github && ci-publish",
     "prerelease": "npm run update:check && git-authors-cli",
     "pretest": "npm run lint",
     "release": "git add package.json && standard-version -a",
