@@ -1,14 +1,19 @@
 language: node_js
 node_js:
-  - "lts/*"
+- lts/*
 install: npm install --no-package-lock
+before_deploy:
+- git config user.email "travis@travis-ci.org"
+- git config user.name "Travis CI"
+- git remote -v
+- git remote set-url origin https://${GH_TOKEN}@github.com/Kikobeats/automate-release.git
+- git remote -v
 deploy:
+  skip_cleanup: true
   provider: script
-  on: 
+  script: npm run release
+  on:
     branch: master
-  script:
-    - git config user.email "$GIT_EMAIL"
-    - git config user.name "$GIT_USERNAME"
-    - npm run release
-
-  
+env:
+  global:
+    secure: ADTgsOKX3jX98RzGq8xO8Hqx5rja30bsFj87OGbh4Lg0nXo6ul/lVgjRV2GdEdKPJvWhjGDNYHhSVQ9IQSVrYweneuXmhyrGlg8YOhMNZhAzpnkiVMvd7NRgMljzJyf0vAjS7Y2fQPsDuCLJAw4uq9wwtxTscTWQH7UdWLFqKZLBahPlu4wcHtojrlw8gjanLMpDztOAXMPQcW19K/19c8WAH/8uQIf/cQBzO1yBBf0J7DXqNZwTUdPg16GgRRpcxgTlxWdp2wocz+gstlfNUytIlz6tTmT7FUvbZu191SlhZ5H8axqNzGvAALzep/W9cc2cdrxgAiDjTekaUs4jojaCDlBqUqk4cbL14QcpDxSfupeoRSMgP71iV8DaHI2suOplqCwjJTWkipmsCng1SNCkOOtDdmckzWZEjWWWC+JwV7azO7hBUSSCSLbpDSKjGbQGFv8dvZM+8Weissq7IMxApTWwYuT+cxr9W8rCxNn8WD8WHOPx+PXX4PCOGwHXZhtE0E0fLW4oCPvf5q60Qo4GHO5l2Vv28PgW2lzxhduR7IS3ZYd7rsqY+J6tOlmHid85RSkpjLq5fkOsQ1oe7HFY3V2x1rjjXDEArxKnFHWf/VVPZQQwIHTPB4HujI5N8TfN1YGjOZirWDpSL/cnHfvcejV+Z8l5dl+sGUJdVxg=
