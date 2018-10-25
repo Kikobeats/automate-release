@@ -1,7 +1,7 @@
 {
   "name": "automate-release",
   "description": "No more manual work in your software releases.",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "main": "index.js",
   "bin": {
     "automate-release": "bin/index.js"
@@ -11,10 +11,7 @@
     "name": "Kiko Beats"
   },
   "contributors": [
-    {
-      "name": "Joseba Legarreta",
-      "email": "josebalega@gmail.com"
-    }
+    "Joseba Legarreta <josebalega@gmail.com>"
   ],
   "keywords": [
     "automate",
