@@ -5,9 +5,7 @@ install: npm install --no-package-lock
 before_deploy:
 - git config user.email "travis@travis-ci.org"
 - git config user.name "Travis CI"
-- git remote -v
 - git remote set-url origin https://${GH_TOKEN}@github.com/Kikobeats/automate-release.git
-- git remote -v
 deploy:
   skip_cleanup: true
   provider: script
