@@ -173,12 +173,12 @@ In the case of GitHub, we can use:
 **GitHub API**
 
 <blockquote>
-<p>e.g. <a href="https://api.github.com/repos/Kikobeats/automatic-release/releases/latest">https://api.github.com/repos/Kikobeats/automatic-release/releases/latest</a></p>
+<p>e.g. <a href="https://api.github.com/repos/Kikobeats/automate-release/releases/latest">https://api.github.com/repos/Kikobeats/automate-release/releases/latest</a></p>
 </blockquote>
 
 **GitHub RSS Feed**
 
-> e.g. [https://github.com/Kikobeats/automatic-release/releases.atom](https://github.com/Kikobeats/automatic-release/releases.atom)
+> e.g. [https://github.com/Kikobeats/automate-release/releases.atom](https://github.com/Kikobeats/automate-release/releases.atom)
 
 Then, just we need to connect our release data with the service where we want to share the information.
 

@@ -70,7 +70,7 @@ const install = async ({ cwd }) => {
 
   jsonFuture.save(pkgPath, pkg)
   console.log()
-  console.log(gray(` ${white('automatic-release')} installed 🎉`))
+  console.log(gray(` ${white('automate-release')} installed 🎉`))
   console.log()
   console.log(gray(` Perform an \`${white('npm install')}\` to finish it.`))
   console.log()
