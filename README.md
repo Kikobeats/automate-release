@@ -1,4 +1,9 @@
-# Automate your releases
+<div align="center">
+	<img width="250" src="https://github.com/Kikobeats/automate-release/raw/master/media/logo.png" alt="Awesome">
+	<br>
+	<br>
+  <br>
+</div>
 
 > **Tip** Install it with `npx automate-release` 🎉.
 
