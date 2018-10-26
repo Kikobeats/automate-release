@@ -3,7 +3,7 @@ language: node_js
 stages:
   - Test
   - name: Release
-    if: commit_message !~ /(release)/
+    if: commit_message !~ /(release|no-release)/
 
 jobs:
   include:

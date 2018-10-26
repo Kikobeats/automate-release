@@ -55,7 +55,7 @@
     "pretest": "npm run lint",
     "release": "git add package.json && standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
-    "release:tags": "git remote -v && git --no-pager log --decorate=short --pretty=oneline -n1 && git push --follow-tags origin HEAD:master && exit 1",
+    "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "exit 0",
     "update": "ncu -a",
     "update:check": "ncu -- --error-level 2"
