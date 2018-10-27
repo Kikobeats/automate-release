@@ -6,8 +6,9 @@ const { get, forEach, set } = require('lodash')
 const { white, red, gray } = require('chalk')
 const existsFile = require('exists-file')
 const jsonFuture = require('json-future')
+const link = require('terminal-link')
+const fs = require('fs-extra')
 const path = require('path')
-const fs = require('fs')
 
 const rootPkg = require('../package.json')
 
@@ -42,25 +43,28 @@ const install = async ({ cwd }) => {
 
   forEach(
     [
-      'scripts.postrelease',
-      'scripts.release',
-      'scripts.prerelease',
-      'scripts.release:github',
-      'scripts.release:tags',
-      'scripts.update',
-      'scripts.update:check',
       'commitlint.extends',
-      'husky.hooks.commit-msg',
-      'husky.hooks.pre-commit',
-      ['lint-staged', 'linters', 'package.json'],
-      'standard-version.scripts.prechangelog',
       'devDependencies.@commitlint/cli',
       'devDependencies.@commitlint/config-conventional',
       'devDependencies.conventional-github-releaser',
       'devDependencies.finepack',
       'devDependencies.git-authors-cli',
       'devDependencies.husky',
-      'devDependencies.lint-staged'
+      'devDependencies.lint-staged',
+      'devDependencies.npm-check-updates',
+      'devDependencies.standard-version',
+      'devDependencies.ci-publish',
+      'husky.hooks.commit-msg',
+      'husky.hooks.pre-commit',
+      'scripts.postrelease',
+      'scripts.prerelease',
+      'scripts.release:github',
+      'scripts.release:tags',
+      'scripts.release',
+      'scripts.update:check',
+      'scripts.update',
+      'standard-version.scripts.prechangelog',
+      ['lint-staged', 'linters', 'package.json']
     ],
     key => {
       const value = get(rootPkg, key)
@@ -69,18 +73,60 @@ const install = async ({ cwd }) => {
   )
 
   jsonFuture.save(pkgPath, pkg)
-  console.log()
-  console.log(gray(` ${white('automate-release')} installed 🎉`))
-  console.log()
-  console.log(gray(` Perform an \`${white('npm install')}\` to finish it.`))
+  await fs.copy(path.resolve(__dirname, '../.travis.yml'), '.travis.yml')
+
   console.log()
   console.log(
     gray(
-      ` Remember to declare \`${white('CONVENTIONAL_GITHUB_RELEASER_TOKEN')}\`.`
+      ` ${white(
+        link(
+          'automate-release',
+          'https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/'
+        )
+      )} installed 🎉.`
     )
   )
-
-  console.log(gray(` See how to: ${white('https://git.io/fxRUv')}`))
+  console.log()
+  console.log(
+    gray(
+      ` Remember to setup on ${white(
+        link(
+          'Travis',
+          'https://docs.travis-ci.com/user/environment-variables#defining-variables-in-repository-settings'
+        )
+      )}:`
+    )
+  )
+  console.log()
+  console.log(
+    gray(
+      `   - \`${white(
+        link(
+          'GH_TOKEN',
+          'https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/'
+        )
+      )}\``
+    )
+  )
+  console.log(
+    gray(
+      `   - \`${white(
+        link('NPM_TOKEN', 'https://github.com/bahmutov/ci-publish#how-to-use')
+      )}\``
+    )
+  )
+  console.log(
+    gray(
+      `   - \`${white(
+        link(
+          'CONVENTIONAL_GITHUB_RELEASER_TOKEN',
+          'https://github.com/conventional-changelog/releaser-tools/tree/master/packages/conventional-github-releaser#setup-token-for-cli'
+        )
+      )}\``
+    )
+  )
+  console.log()
+  console.log(gray(` Perform an \`${white('npm install')}\` to finish it.`))
 }
 
 install(cli.flags).catch(processError)
