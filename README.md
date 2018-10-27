@@ -19,15 +19,12 @@ Your next release will be automatically doing:
   * [Commit Message Guidelines](#commit-message-guidelines)
   * [Examples of Git Commits](#examples-of-git-commits)
 - [Determinate Next Version Based on History](#determinate-next-version-based-on-history)
-    + [GitHub Release](#github-release)
+  * [GitHub Release](#github-release)
 - [Continous Release](#continous-release)
   * [Release on CI/CD](#release-on-cicd)
 - [Communicate Your Changes](#communicate-your-changes)
   * [Retrieve the Latest Release](#retrieve-the-latest-release)
-    + [GitHub](#github)
   * [Publishing the Latest Release](#publishing-the-latest-release)
-    + [Services](#services)
-      - [Self-Hosted](#self-hosted)
 
 Let me show you how to do it.
 
@@ -154,7 +151,7 @@ You can write into it and your words will be preserved between versions.
 
 ![](https://i.imgur.com/QOse3tZ.png)
 
-#### GitHub Release
+### GitHub Release
 
 GitHub (and GitLab too) has a special place into the repository for reflecting releases:
 
