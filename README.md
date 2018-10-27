@@ -216,7 +216,7 @@ You can see [.travis.yml](/.travis.yml) to see how it is done or just run `npx a
 
 You can establish a strategy for communicating your release change in every release to put the icing on the cake.
 
-	![](https://i.imgur.com/uXLNGtp.png)
+![](https://i.imgur.com/uXLNGtp.png)
 
 Just you need to recover the latest release and publish it on other channel using an intermediate service that connects it over Twitter, Slack or where your audience is
 
