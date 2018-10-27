@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.10"></a>
+## [0.8.10](https://github.com/Kikobeats/automate-release/compare/v0.8.7...v0.8.10) (2018-10-27)
+
+
+### Bug Fixes
+
+* improve script ([17f4cba](https://github.com/Kikobeats/automate-release/commit/17f4cba))
+
+
+
 <a name="0.8.9"></a>
 ## [0.8.9](https://github.com/Kikobeats/automate-release/compare/v0.8.7...v0.8.9) (2018-10-26)
 
