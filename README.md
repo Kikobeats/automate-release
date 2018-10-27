@@ -18,9 +18,16 @@ Your next release will be automatically doing:
 - [Follow a Git Commit Convention](#follow-a-git-commit-convention)
   * [Commit Message Guidelines](#commit-message-guidelines)
   * [Examples of Git Commits](#examples-of-git-commits)
-- [Determinate Next Version Based on History](#determinate-the-next-version-based-on-history)
+- [Determinate Next Version Based on History](#determinate-next-version-based-on-history)
     + [GitHub Release](#github-release)
-- [Communicate your changes](#communicate-your-changes)
+- [Continous Release](#continous-release)
+  * [Release on CI/CD](#release-on-cicd)
+- [Communicate Your Changes](#communicate-your-changes)
+  * [Retrieve the Latest Release](#retrieve-the-latest-release)
+    + [GitHub](#github)
+  * [Publishing the Latest Release](#publishing-the-latest-release)
+    + [Services](#services)
+      - [Self-Hosted](#self-hosted)
 
 Let me show you how to do it.
 
@@ -40,7 +47,7 @@ It'll force you to follow a strict format into your git messages.
 
 You **can't do** the commit until the format is valid. 
 
-<div><small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small></div>
+<small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small>
 
 ### Commit Message Guidelines
 
@@ -178,7 +185,7 @@ Next time, your metadata will be associated with the GitHub/GitLab release 🎉
 
 ![](https://i.imgur.com/4Am8xIx.png)
 
-## Release Often and Automatic
+## Continous Release
 
 The human behavior in a release process is very limited: we only have to trigger the release action. After that, all is automated 🤖.
 
@@ -200,7 +207,7 @@ But now, after that, The **Release** stage will be executed, that will perform o
 
 <div align="center">
         <img src="https://i.imgur.com/7x6doze.jpg">
-        <div><small>Have you noticed that? It's the sweet sensation of automation.</small></div>
+        <div><smal>Have you noticed that? It's the sweet sensation of automation.</small></div>
   <br>
 </div>
 
@@ -208,32 +215,29 @@ That's specially helpful as maintainer if you are already have automated part of
 
 You can see [.travis.yml](/.travis.yml) to see how it is done or just run `npx automate-release` to install it in your project folder.
 
-## Communicate The Release
+## Communicate Your Changes
 
-> **Tip**: Use [tom](http://tom.js.org/) for sending multiple notification (Slack/Twitter/Telegram/Email).
+You can establish a strategy for communicating your release change in every release to put the icing on the cake.
 
-It's the moment to make your changes public for the general public.
+	![](https://i.imgur.com/uXLNGtp.png)
 
-First, we need to retrieve our latest release published. 
+Just you need to recover the latest release and publish it on other channel using an intermediate service that connects it over Twitter, Slack or where your audience is
 
-In the case of GitHub, we can use:
+### Retrieve the Latest Release
 
-**GitHub API**
+#### GitHub
 
-<blockquote>
-<p>e.g. <a href="https://api.github.com/repos/Kikobeats/automate-release/releases/latest">https://api.github.com/repos/Kikobeats/automate-release/releases/latest</a></p>
-</blockquote>
+- [GitHub API](https://api.github.com/repos/Kikobeats/automate-release/releases/latest) – For recovering information per `owner_name/repo_name`.
+- [GitHub RSS Feed](https://github.com/Kikobeats/automate-release/releases.atom) – For getting atom feed per `owner_name/repo_name`.
 
-**GitHub RSS Feed**
+### Publishing the Latest Release
 
-> e.g. [https://github.com/Kikobeats/automate-release/releases.atom](https://github.com/Kikobeats/automate-release/releases.atom)
+#### Services
 
-Then, just we need to connect our release data with the service where we want to share the information.
+- [CodeRelease.io](https://coderelease.io) - GitHub Release Notifications on Your E-mail.
+- [IFTTT](https://ifttt.com) / [Zapier](https://zapier.com/) – For declaring using *RSS-to-Slack* recipes or similar.
+- [@github_releases_notify_bot](https://telegram.me/github_releases_notify_bot) – Telegram bot to receive release notifications.
 
-This can be as simple as creating an [IFTTT](https://ifttt.com) recipe
+##### Self-Hosted
 
-<div align="center">
-<img src="https://i.imgur.com/ZgUB7w5.png" width='200px' />
-</div>
-
-- [@github_releases_notify_bot](https://telegram.me/github_releases_notify_bot) at Telegram.
+- [tom.js.org](http://tom.js.org/) – A tiny microservice for sending notifications using multiple channels (Slack/Twitter/Telegram/Email).
