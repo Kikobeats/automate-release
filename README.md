@@ -40,7 +40,7 @@ It'll force you to follow a strict format into your git messages.
 
 You **can't do** the commit until the format is valid. 
 
-<small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small>
+<div><small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small></div>
 
 ### Commit Message Guidelines
 
@@ -200,7 +200,7 @@ But now, after that, The **Release** stage will be executed, that will perform o
 
 <div align="center">
         <img src="https://i.imgur.com/7x6doze.jpg">
-        <div><smal>Have you noticed that? It's the sweet sensation of automation.</small></div>
+        <div><small>Have you noticed that? It's the sweet sensation of automation.</small></div>
   <br>
 </div>
 
