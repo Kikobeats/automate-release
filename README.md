@@ -5,7 +5,7 @@
   <br>
 </div>
 
-> **Tip** Install it with `npx automate-release` 🎉.
+> **TL;DR** Run `npx automate-release` 🎉.
 
 A release might seem just an irrelevant number, but here you'll find why you should be using it.
 
@@ -18,7 +18,7 @@ Your next release will be automatically doing:
 - [Follow a Git Commit Convention](#follow-a-git-commit-convention)
   * [Commit Message Guidelines](#commit-message-guidelines)
   * [Examples of Git Commits](#examples-of-git-commits)
-- [Determinate the Next Version Based on History](#determinate-the-next-version-based-on-history)
+- [Determinate Next Version Based on History](#determinate-the-next-version-based-on-history)
     + [GitHub Release](#github-release)
 - [Communicate your changes](#communicate-your-changes)
 
@@ -77,7 +77,7 @@ test: update snapshots
 style: use space instead of tabs
 ```
 
-## Determinate the Next Version Based on History
+## Determinate Next Version Based on History
 
 Now that we have a `git commit` convention, we can jump in the next thing, that will make our first release 🎉.
 
@@ -85,7 +85,7 @@ For do that, we are going to use [standard-version](https://github.com/conventio
 
 ![](https://i.imgur.com/nmfLfkC.png)
 
-**standard-version** will determinate automagically the next version to release based on your `git history`.
+[standard-version](https://github.com/conventional-changelog/standard-version) will determinate automagically the next version to release based on your `git history`.
 
 For do that it will consider:
 
@@ -159,6 +159,8 @@ Now that we are generating a `CHANGELOG.md` it would be interesting to reflect t
 
 We can use a tool called [releaser-tools] (https://github.com/conventional-changelog/releaser-tools) who will do exactly that, leaving our release section pretty 💅.
 
+> **Note**: Remember to setup [`CONVENTIONAL_GITHUB_RELEASER_TOKEN`](https://github.com/conventional-changelog/releaser-tools/tree/master/packages/conventional-github-releaser#setup-token-for-cli). You can use [direnv](https://direnv.net/) for declaring local development variables.
+
 We need to associate it as part of our `postrelease` script:
 
 ```json
@@ -176,7 +178,37 @@ Next time, your metadata will be associated with the GitHub/GitLab release 🎉
 
 ![](https://i.imgur.com/4Am8xIx.png)
 
-## Communicate your changes
+## Release Often and Automatic
+
+The human behavior in a release process is very limited: we only have to trigger the release action. After that, all is automated 🤖.
+
+But what if I say you we can eliminate the human behavior from the release equation?
+
+![](https://i.imgur.com/ivj9I69.jpg)
+
+The premise will be that, every commit on your `master` branch will mean that a new version of your software will be released.
+
+### Release on CI/CD
+
+The right place to do this is as part of our **Continuous Integration**.
+
+![](https://i.imgur.com/zEH4hA8.png)
+
+Every time a new Pull Request is merged in our `master` branch, our **Tests** will be executed to determinate if all is fine (nothing new here).
+
+But now, after that, The **Release** stage will be executed, that will perform our `npm run release` command to complete the action.
+
+<div align="center">
+        <img src="https://i.imgur.com/7x6doze.jpg">
+        <div><smal>Have you noticed that? It's the sweet sensation of automation.</small></div>
+  <br>
+</div>
+
+That's specially helpful as maintainer if you are already have automated part of the process that uses services such as [Greenkeeper](https://greenkeeper.io) to keep your dependencies up to date, that create PR very often if you have many dependencies or they are updated very often (something that happens all the time at NPM ecosystem).
+
+You can see [.travis.yml](/.travis.yml) to see how it is done or just run `npx automate-release` to install it in your project folder.
+
+## Communicate The Release
 
 > **Tip**: Use [tom](http://tom.js.org/) for sending multiple notification (Slack/Twitter/Telegram/Email).
 
@@ -203,3 +235,5 @@ This can be as simple as creating an [IFTTT](https://ifttt.com) recipe
 <div align="center">
 <img src="https://i.imgur.com/ZgUB7w5.png" width='200px' />
 </div>
+
+- [@github_releases_notify_bot](https://telegram.me/github_releases_notify_bot) at Telegram.
