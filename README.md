@@ -222,6 +222,12 @@ Just you need to recover the latest release and publish it on other channel usin
 
 ### Retrieve the Latest Release
 
+![](https://i.imgur.com/5vDpWJM.jpg)
+
+From [now](https://twitter.com/github/status/1067483957573373952) GitHub brings the ability to subscribe to any repository for getting notifications related with new versions.
+
+Alternatively, you can get release information from different sources and connect it with third party services using different ways
+
 #### GitHub
 
 - [GitHub API](https://api.github.com/repos/Kikobeats/automate-release/releases/latest) – For recovering information per `owner_name/repo_name`.
