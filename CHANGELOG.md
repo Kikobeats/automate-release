@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.12"></a>
+## [0.8.12](https://github.com/Kikobeats/automate-release/compare/v0.8.10...v0.8.12) (2018-11-27)
+
+
+### Bug Fixes
+
+* add continous release section ([797ecd1](https://github.com/Kikobeats/automate-release/commit/797ecd1)), closes [#2](https://github.com/Kikobeats/automate-release/issues/2)
+* add coverage script under test ([134a488](https://github.com/Kikobeats/automate-release/commit/134a488))
+* add github release info ([9933aa8](https://github.com/Kikobeats/automate-release/commit/9933aa8))
+* define test matrix ([41ed5c0](https://github.com/Kikobeats/automate-release/commit/41ed5c0))
+
+
+
 <a name="0.8.11"></a>
 ## [0.8.11](https://github.com/Kikobeats/automate-release/compare/v0.8.10...v0.8.11) (2018-10-29)
 
