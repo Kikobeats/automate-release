@@ -214,19 +214,19 @@ You can see [.travis.yml](/.travis.yml) to see how it is done or just run `npx a
 
 ## Communicate Your Changes
 
-You can establish a strategy for communicating your release change in every release to put the icing on the cake.
-
-![](https://i.imgur.com/uXLNGtp.png)
-
-Just you need to recover the latest release and publish it on other channel using an intermediate service that connects it over Twitter, Slack or where your audience is
-
-### Retrieve the Latest Release
+Releases also is a way to establish a compromise with your audience in order to know what's news.
 
 ![](https://i.imgur.com/5vDpWJM.jpg)
 
 From [now](https://twitter.com/github/status/1067483957573373952) GitHub brings the ability to subscribe to any repository for getting notifications related with new versions.
 
-Alternatively, you can get release information from different sources and connect it with third party services using different ways
+### Be Notified
+
+Alternatively, you can get release information from different sources and connect it with third party services using different ways.
+
+![](https://i.imgur.com/uXLNGtp.png)
+
+Just you need to recover the latest release and publish it on other channel using an intermediate service that connects it over Twitter, Slack or where your audience is.
 
 #### GitHub
 
