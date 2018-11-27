@@ -23,7 +23,7 @@ Your next release will be automatically doing:
 - [Continous Release](#continous-release)
   * [Release on CI/CD](#release-on-cicd)
 - [Communicate Your Changes](#communicate-your-changes)
-  * [Retrieve the Latest Release](#retrieve-the-latest-release)
+  * [Be Notified](#be-notified)
   * [Publishing the Latest Release](#publishing-the-latest-release)
 
 Let me show you how to do it.
