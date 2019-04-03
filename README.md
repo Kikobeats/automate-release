@@ -95,19 +95,19 @@ For do that it will consider:
 
 **patches** (`1.0.0` → `1.0.1`)
 
-```sh
+```bash
 git commit -a -m "fix(parsing): fixed a bug in our parser"
 ```
 
 **features** (`1.0.0` → `1.1.0`)
 
-```sh
+```bash
 git commit -a -m "feat(parser): we now have a parser \o/"
 ```
 
 **breaking changes** (`1.0.0` → `2.0.0`)
 
-```sh
+```bash
 git commit -a -m "feat(new-parser): introduces a new parsing library
 BREAKING CHANGE: new library does not support foo-construct"
 ```
