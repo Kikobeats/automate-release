@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.8.14"></a>
+## [0.8.14](https://github.com/Kikobeats/automate-release/compare/v0.8.13...v0.8.14) (2019-04-03)
+
+
+### Bug Fixes
+
+* rename sh into bash ([1a7ca31](https://github.com/Kikobeats/automate-release/commit/1a7ca31))
+
+
+
 <a name="0.8.13"></a>
 ## [0.8.13](https://github.com/Kikobeats/automate-release/compare/v0.8.10...v0.8.13) (2019-01-25)
 
