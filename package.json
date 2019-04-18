@@ -1,7 +1,7 @@
 {
   "name": "automate-release",
   "description": "No more manual work in your software releases.",
-  "version": "0.8.14",
+  "version": "0.8.15",
   "main": "index.js",
   "bin": {
     "automate-release": "bin/index.js"
@@ -11,8 +11,7 @@
     "name": "Kiko Beats"
   },
   "contributors": [
-    "Travis CI <travis@travis-ci.org>",
-    "Joseba Legarreta <josebalega@gmail.com>"
+    "ImgBotApp <ImgBotHelp@gmail.com>"
   ],
   "keywords": [
     "automate",
