@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.8.16](https://github.com/Kikobeats/automate-release/compare/v0.8.15...v0.8.16) (2019-05-20)
+
+
+### Build System
+
+* tweaks ([620944a](https://github.com/Kikobeats/automate-release/commit/620944a))
+
+
 
 ## [0.8.15](https://github.com/Kikobeats/automate-release/compare/v0.8.14...v0.8.15) (2019-04-18)
 
