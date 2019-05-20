@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.17](https://github.com/Kikobeats/automate-release/compare/v0.8.16...v0.8.17) (2019-05-20)
+
+
+### Build System
+
+* change git-authors-cli position ([0a23528](https://github.com/Kikobeats/automate-release/commit/0a23528))
+* update dependencies ([f7436eb](https://github.com/Kikobeats/automate-release/commit/f7436eb))
+
+
+
 ### [0.8.16](https://github.com/Kikobeats/automate-release/compare/v0.8.15...v0.8.16) (2019-05-20)
 
 
