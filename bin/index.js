@@ -33,7 +33,7 @@ const processError = err => {
 const install = async ({ cwd }) => {
   const pkgPath = path.join(cwd, 'package.json')
 
-  if (!await existsFile(pkgPath)) {
+  if (!(await existsFile(pkgPath))) {
     return processError({
       message: 'First, you need to initialize `package.json`.'
     })
@@ -52,7 +52,6 @@ const install = async ({ cwd }) => {
       'devDependencies.husky',
       'devDependencies.lint-staged',
       'devDependencies.npm-check-updates',
-      'devDependencies.standard-version',
       'devDependencies.ci-publish',
       'husky.hooks.commit-msg',
       'husky.hooks.pre-commit',
@@ -63,7 +62,6 @@ const install = async ({ cwd }) => {
       'scripts.release',
       'scripts.update:check',
       'scripts.update',
-      'standard-version.scripts.prechangelog',
       ['lint-staged', 'linters', 'package.json']
     ],
     key => {
