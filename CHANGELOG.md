@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.20](https://github.com/Kikobeats/automate-release/compare/v0.8.19...v0.8.20) (2019-06-19)
+
+
+### Build System
+
+* setup default git settings ([6dcea6a](https://github.com/Kikobeats/automate-release/commit/6dcea6a))
+
+
+
 ### [0.8.19](https://github.com/Kikobeats/automate-release/compare/v0.8.18...v0.8.19) (2019-05-20)
 
 
