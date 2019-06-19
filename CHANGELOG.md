@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.21](https://github.com/Kikobeats/automate-release/compare/v0.8.20...v0.8.21) (2019-06-19)
+
+
+### Bug Fixes
+
+* typo ([4485e5c](https://github.com/Kikobeats/automate-release/commit/4485e5c))
+
+
+
 ### [0.8.20](https://github.com/Kikobeats/automate-release/compare/v0.8.19...v0.8.20) (2019-06-19)
 
 
