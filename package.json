@@ -63,7 +63,7 @@
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "exit 0",
-    "update": "ncu -a",
+    "update": "ncu -u",
     "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
