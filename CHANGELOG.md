@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.22](https://github.com/Kikobeats/automate-release/compare/v0.8.21...v0.8.22) (2019-06-21)
+
+
+### Build System
+
+* adjust preversion ([56a8b71](https://github.com/Kikobeats/automate-release/commit/56a8b71))
+* update ncu flag ([5ec69cb](https://github.com/Kikobeats/automate-release/commit/5ec69cb))
+
+
+
 ### [0.8.21](https://github.com/Kikobeats/automate-release/compare/v0.8.20...v0.8.21) (2019-06-19)
 
 
