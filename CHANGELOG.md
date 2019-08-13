@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.25](https://github.com/Kikobeats/automate-release/compare/v0.8.24...v0.8.25) (2019-08-13)
+
+
+### Bug Fixes
+
+* linters ([9bf205a](https://github.com/Kikobeats/automate-release/commit/9bf205a))
+
 ### [0.8.24](https://github.com/Kikobeats/automate-release/compare/v0.8.23...v0.8.24) (2019-08-10)
 
 ### [0.8.23](https://github.com/Kikobeats/automate-release/compare/v0.8.22...v0.8.23) (2019-07-02)
