@@ -63,7 +63,7 @@ const install = async ({ cwd }) => {
       'scripts.release',
       'scripts.update:check',
       'scripts.update',
-      ['lint-staged', 'linters', 'package.json']
+      ['lint-staged', 'package.json']
     ],
     key => {
       const value = get(rootPkg, key)
