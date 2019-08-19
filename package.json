@@ -54,11 +54,11 @@
     "bin"
   ],
   "scripts": {
+    "contributors": "git-authors-cli && finepack && git add package.json",
     "lint": "standard-markdown && standard",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
-    "prerelease": "npm run update:check",
+    "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
-    "preversion": "git-authors-cli && git add package.json",
     "release": "standard-version -a",
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
