@@ -54,7 +54,7 @@
     "bin"
   ],
   "scripts": {
-    "contributors": "git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "lint": "standard-markdown && standard",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
     "prerelease": "npm run update:check && npm run contributors",
