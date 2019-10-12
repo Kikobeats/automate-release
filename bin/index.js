@@ -56,6 +56,7 @@ const install = async ({ cwd }) => {
       'devDependencies.standard-version',
       'husky.hooks.commit-msg',
       'husky.hooks.pre-commit',
+      'scripts.contributors',
       'scripts.postrelease',
       'scripts.prerelease',
       'scripts.release:github',
