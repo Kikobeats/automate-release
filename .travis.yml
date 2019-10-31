@@ -1,4 +1,4 @@
-language: node_js
+  language: node_js
 
 node_js:
   - lts/*
@@ -14,8 +14,6 @@ stages:
 jobs:
   include:
     - stage: Release
-      node_js: lts/*
-      install: npm install --no-package-lock
       before_deploy:
         - git config user.email ${GITHUB_EMAIL:-"travis@travis-ci.org"}
         - git config user.name ${GITHUB_USER:-"Travis CI"}
