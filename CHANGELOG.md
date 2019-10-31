@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.29](https://github.com/Kikobeats/automate-release/compare/v0.8.28...v0.8.29) (2019-10-31)
+
+
+### Bug Fixes
+
+* indent ([8e3a872](https://github.com/Kikobeats/automate-release/commit/8e3a8725da104ed4a05f978a7fbbe11822ce8281))
+
 ### [0.8.28](https://github.com/Kikobeats/automate-release/compare/v0.8.27...v0.8.28) (2019-10-12)
 
 ### [0.8.27](https://github.com/Kikobeats/automate-release/compare/v0.8.26...v0.8.27) (2019-08-19)
