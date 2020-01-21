@@ -26,7 +26,7 @@
     "standard-version"
   ],
   "dependencies": {
-    "chalk": "~2.4.1",
+    "chalk": "~3.0.0",
     "exists-file": "~3.0.2",
     "fs-extra": "~8.0.1",
     "json-future": "~2.1.3",
