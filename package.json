@@ -32,7 +32,7 @@
     "json-future": "~2.2.4",
     "lodash": "~4.17.15",
     "terminal-link": "~2.1.1",
-    "update-notifier": "~4.0.0"
+    "update-notifier": "~4.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
