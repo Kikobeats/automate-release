@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.41](https://github.com/Kikobeats/automate-release/compare/v0.8.40...v0.8.41) (2020-06-10)
+
 ### [0.8.40](https://github.com/Kikobeats/automate-release/compare/v0.8.39...v0.8.40) (2020-04-03)
 
 ### [0.8.39](https://github.com/Kikobeats/automate-release/compare/v0.8.38...v0.8.39) (2020-03-20)
