@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.44](https://github.com/Kikobeats/automate-release/compare/v0.8.43...v0.8.44) (2020-07-01)
+
+
+### Features
+
+* add release-please ([d63c6aa](https://github.com/Kikobeats/automate-release/commit/d63c6aafacf0c0b52aebefd9b9ae24b96a4396a8))
+
+
+### Bug Fixes
+
+* identation ([497f2a8](https://github.com/Kikobeats/automate-release/commit/497f2a8a8f0e1d58ecaf5f5cc884db0dc4246bcb))
+
 ### [0.8.43](https://github.com/Kikobeats/automate-release/compare/v0.8.41...v0.8.43) (2020-07-01)
 
 
