@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+
+</head>
+<body>
+  <style>
+    :root {
+      --microlink-background-color: #1A1A1A;
+      --microlink-color: white;
+      --microlink-border-color: #666;
+      --microlink-hover-border-color: #999;
+    }
+
+    body,
+    .anchor span {
+      color: #303336;
+    }
+
+    .app-name-link img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .markdown-section {
+      max-width: 650px;
+    }
+
+    .markdown-section>  * {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+
+  </style>
+  <div id="app"></div>
+  <aside id="toc"></aside>
+  <script>
+    window.$docsify = {
+      name: 'Automate Release',
+      logo: 'media/headline.svg',
+      repo: 'Kikobeats/automate-release',
+      themeColor: '#C09F78',
+      plugins: [
+        function(hook, vm) {
+          hook.mounted(function() {
+          });
+
+          hook.ready(function() {
+            const externalLinks = document.querySelectorAll("main a[target='_blank']")
+            microlinkHover(externalLinks)
+          })
+        }
+      ]
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/react@16/umd/react.production.min.js,npm/react-dom@16/umd/react-dom.production.min.js,npm/react-is@16/umd/react-is.production.min.js,npm/styled-components@5/dist/styled-components.min.js,npm/@microlink/mql@latest/dist/mql.min.js,npm/@microlink/hover-vanilla@latest/dist/microlink.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+</body>
+</html>
