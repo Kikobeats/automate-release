@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Search Engine -->
+  <meta name="description" content="No more manual work in your software releases.">
+  <meta name="image" content="https://kikobeats.github.io/automate-release/media/banner.png">
+  <link rel="canonical" href="https://kikobeats.github.io/automate-release" />
+  <title>Automate Releases – No more manual work in your software releases.</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="Automate Releases – No more manual work in your software releases.">
+  <meta itemprop="description" content="No more manual work in your software releases.">
+  <meta itemprop="image" content="https://kikobeats.github.io/automate-release/media/banner.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="browserless">
+  <meta name="twitter:description" content="No more manual work in your software releases.">
+  <meta name="twitter:image" content="https://kikobeats.github.io/automate-release/media/banner.png">
+  <meta name="twitter:label1" value="Installation" />
+  <meta name="twitter:data1" value="npm install browserless --save" />
+  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+  <meta property="og:title" content="browserless">
+  <meta property="og:logo" content="https://kikobeats.github.io/automate-release/media/logo.png">
+  <meta property="og:description" content="No more manual work in your software releases.">
+  <meta property="og:image" content="https://kikobeats.github.io/automate-release/media/banner.png">
+  <meta property="og:url" content="https://kikobeats.github.io/automate-release">
+  <meta property="og:site_name" content="browserless.js.org">
+  <meta property="og:type" content="website">  
+
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 
@@ -26,9 +53,15 @@
     .markdown-section h2, 
     .markdown-section h3, 
     .markdown-section h4, 
-    .markdown-section strong,
+    .markdown-section strong
+    .markdown-section blockquote,
+    .markdown-section blockquote p,
     .markdown-section em {
       color: #303336;
+    }
+
+    .markdown-section blockquote p {
+      font-weight: 400;
     }
 
     .app-name-link img {
