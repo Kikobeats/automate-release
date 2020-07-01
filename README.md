@@ -40,15 +40,15 @@ For ensuring all git messages follow the same pattern, We are going to use [comm
 
 ![](https://i.imgur.com/nZOE5Vu.png)
 
-You **can't do** the commit until the format is valid.  It'll force you to follow a strict format into your git messages.
+You can't do the commit until the format is valid: It'll force you to follow a strict format into your git messages.
 
 <small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small>
 
-Linting commits is also a thing that has to be applied to Pull Requests.
+That's also a thing applicable to Pull Request title:
 
 ![](https://user-images.githubusercontent.com/39191/31453417-f6da45ae-ae66-11e7-9727-24c69d2fc03b.png)
 
-Just integrate [commitlintbot](https://github.com/paulirish/commitlintbot) with any project that need to follow the convention.
+In that case, integrate [commitlintbot](https://github.com/paulirish/commitlintbot) with your git project to have the same effect.
 
 ### Commit Message Guidelines
 
@@ -188,13 +188,15 @@ Next time, your metadata will be associated with the GitHub/GitLab release 🎉
 
 ## Continous Release
 
-The human behavior in a release process is very limited: we only have to trigger the release action. After that, all is automated 🤖.
+The human behavior in a release process should be very limited: we, as humans, just want to be the trigger for the next release.
 
-But what if I say you we can eliminate the human behavior from the release equation?
+The rest of the things should be work in a boring and automated way 🤖.
 
-![](https://i.imgur.com/ivj9I69.jpg)
+![](https://github.com/googleapis/release-please/raw/master/screen.png)
 
-The premise will be that, every commit on your `master` branch will mean that a new version of your software will be released.
+Every commit that land on the `master` branch will mean that a new version of your software could be released.
+
+For projects with a lot of activity, the condition could be a little bit more relaxed; In that case, check [release-please](https://github.com/googleapis/release-please), where you have more control about when the next release will be shipped.
 
 ### Release on CI/CD
 
