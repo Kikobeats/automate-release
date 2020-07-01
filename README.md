@@ -40,11 +40,15 @@ For ensuring all git messages follow the same pattern, We are going to use [comm
 
 ![](https://i.imgur.com/nZOE5Vu.png)
 
-It'll force you to follow a strict format into your git messages.
-
-You **can't do** the commit until the format is valid. 
+You **can't do** the commit until the format is valid.  It'll force you to follow a strict format into your git messages.
 
 <small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small>
+
+Linting commits is also a thing that has to be applied to Pull Requests.
+
+![](https://user-images.githubusercontent.com/39191/31453417-f6da45ae-ae66-11e7-9727-24c69d2fc03b.png)
+
+Just integrate [commitlintbot](https://github.com/paulirish/commitlintbot) with any project that need to follow the convention.
 
 ### Commit Message Guidelines
 
