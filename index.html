@@ -20,24 +20,61 @@
     }
 
     body,
-    .anchor span {
+    .anchor span,
+    .sidebar ul li a,
+    .markdown-section h1, 
+    .markdown-section h2, 
+    .markdown-section h3, 
+    .markdown-section h4, 
+    .markdown-section strong,
+    .markdown-section em {
       color: #303336;
     }
 
     .app-name-link img {
-      width: 80px;
-      margin-bottom: 1rem;
+      transform: scale(1.5);
+      margin-bottom: 18px;
     }
 
     .markdown-section {
-      max-width: 650px;
+      max-width: 960px;
     }
 
-    .markdown-section>  * {
+    .markdown-section pre {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .markdown-section a {
+      text-decoration: none;
+    }
+
+    .markdown-section a:hover {
+      text-decoration: underline;
+    }
+
+    .markdown-section {
       font-size: 18px;
       line-height: 25.2px;
     }
 
+    #main h1,
+    #main h2,
+    #main h3,
+    #main h4,
+    #main h5,
+    #main h6,
+    #main blockquote,
+    #main ul,
+    #main p:not(.img-container) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 650px;
+    } 
+
+    .microlink_card__content_url p {
+      margin-left: 0 !important;
+    }
   </style>
   <div id="app"></div>
   <aside id="toc"></aside>
@@ -49,10 +86,10 @@
       themeColor: '#C09F78',
       plugins: [
         function(hook, vm) {
-          hook.mounted(function() {
-          });
-
           hook.ready(function() {
+            const elements = document.querySelectorAll("#main img")
+            elements.forEach(el => el.parentNode.classList.add('img-container'))
+      
             const externalLinks = document.querySelectorAll("main a[target='_blank']")
             microlinkHover(externalLinks)
           })
@@ -60,7 +97,7 @@
       ]
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/combine/npm/react@16/umd/react.production.min.js,npm/react-dom@16/umd/react-dom.production.min.js,npm/react-is@16/umd/react-is.production.min.js,npm/styled-components@5/dist/styled-components.min.js,npm/@microlink/mql@latest/dist/mql.min.js,npm/@microlink/hover-vanilla@latest/dist/microlink.min.js"></script>
+  <script src="//cdn.jsdelivr.net/combine/npm/react@16/umd/react.production.min.js,npm/react-dom@16/umd/react-dom.production.min.js,npm/react-is@16/umd/react-is.production.min.js,npm/styled-components@5/dist/styled-components.min.js,npm/@microlink/mql@latest/dist/mql.min.js,npm/@microlink/hover-vanilla@latest/dist/microlink.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
 </html>

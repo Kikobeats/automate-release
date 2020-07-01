@@ -46,7 +46,7 @@ You can't do the commit until the format is valid: It'll force you to follow a s
 
 That's also a thing applicable to Pull Request title:
 
-![](https://user-images.githubusercontent.com/39191/31453417-f6da45ae-ae66-11e7-9727-24c69d2fc03b.png)
+![](https://i.imgur.com/xfikguc.png)
 
 In that case, integrate [commitlintbot](https://github.com/paulirish/commitlintbot) with your git project to have the same effect.
 
@@ -165,7 +165,7 @@ When you push a `git tag`, it will appear here, but nothing more. No text or cha
 
 Now that we are generating a `CHANGELOG.md` it would be interesting to reflect the changes associated with each version.
 
-We can use a tool called [releaser-tools] (https://github.com/conventional-changelog/releaser-tools) who will do exactly that, leaving our release section pretty 💅.
+We can use a tool called [releaser-tools](https://github.com/conventional-changelog/releaser-tools) who will do exactly that, leaving our release section pretty 💅.
 
 > **Note**: Remember to setup [`CONVENTIONAL_GITHUB_RELEASER_TOKEN`](https://github.com/conventional-changelog/releaser-tools/tree/master/packages/conventional-github-releaser#setup-token-for-cli). You can use [direnv](https://direnv.net/) for declaring local development variables.
 
