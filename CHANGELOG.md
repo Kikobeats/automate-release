@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.51](https://github.com/Kikobeats/automate-release/compare/v0.8.50...v0.8.51) (2020-07-02)
+
+
+### Bug Fixes
+
+* include travis file ([121f74c](https://github.com/Kikobeats/automate-release/commit/121f74cf7d9dbfd7989ced226f5bffaab5085f28))
+
 ### [0.8.50](https://github.com/Kikobeats/automate-release/compare/v0.8.49...v0.8.50) (2020-07-01)
 
 ### [0.8.49](https://github.com/Kikobeats/automate-release/compare/v0.8.48...v0.8.49) (2020-07-01)
