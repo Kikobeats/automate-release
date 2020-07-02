@@ -51,6 +51,7 @@
     "standard-version": "latest"
   },
   "files": [
+    ".travis.yml",
     "README.md",
     "bin"
   ],
