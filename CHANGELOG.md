@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.53](https://github.com/Kikobeats/automate-release/compare/v0.8.52...v0.8.53) (2020-07-02)
+
+
+### Bug Fixes
+
+* use a color with better contrast ([607176c](https://github.com/Kikobeats/automate-release/commit/607176c553b24f2f7701d61f45722a8c4716f1cb)), closes [#28](https://github.com/Kikobeats/automate-release/issues/28)
+
 ### [0.8.52](https://github.com/Kikobeats/automate-release/compare/v0.8.51...v0.8.52) (2020-07-02)
 
 
