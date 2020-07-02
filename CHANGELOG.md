@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.52](https://github.com/Kikobeats/automate-release/compare/v0.8.51...v0.8.52) (2020-07-02)
+
+
+### Bug Fixes
+
+* use png instead of svg for headline ([f43d76a](https://github.com/Kikobeats/automate-release/commit/f43d76a1abf08b3906d2a32d02d4c0ebc630e07c)), closes [#27](https://github.com/Kikobeats/automate-release/issues/27)
+
 ### [0.8.51](https://github.com/Kikobeats/automate-release/compare/v0.8.50...v0.8.51) (2020-07-02)
 
 
