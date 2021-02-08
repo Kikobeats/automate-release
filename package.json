@@ -1,7 +1,7 @@
 {
   "name": "automate-release",
   "description": "No more manual work in your software releases.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "bin": {
     "automate-release": "bin/index.js"

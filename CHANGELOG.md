@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/Kikobeats/automate-release/compare/v1.0.5...v1.0.6) (2021-02-08)
+
+
+### Bug Fixes
+
+* add ci-publish fallback for local releases ([143de3f](https://github.com/Kikobeats/automate-release/commit/143de3fabd3a6c0f12123be7a82eb892f33c4b78))
+
 ### [1.0.5](https://github.com/Kikobeats/automate-release/compare/v1.0.4...v1.0.5) (2021-01-20)
 
 ### [1.0.4](https://github.com/Kikobeats/automate-release/compare/v1.0.3...v1.0.4) (2020-12-25)
