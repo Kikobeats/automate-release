@@ -54,8 +54,6 @@ const install = async ({ cwd }) => {
       'devDependencies.lint-staged',
       'devDependencies.npm-check-updates',
       'devDependencies.standard-version',
-      'husky.hooks.commit-msg',
-      'husky.hooks.pre-commit',
       'scripts.contributors',
       'scripts.postinstall',
       'scripts.postrelease',
