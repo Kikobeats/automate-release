@@ -57,6 +57,7 @@ const install = async ({ cwd }) => {
       'husky.hooks.commit-msg',
       'husky.hooks.pre-commit',
       'scripts.contributors',
+      'scripts.postinstall',
       'scripts.postrelease',
       'scripts.prerelease',
       'scripts.release:github',
@@ -74,6 +75,7 @@ const install = async ({ cwd }) => {
 
   jsonFuture.save(pkgPath, pkg)
   await fs.copy(path.resolve(__dirname, '../.travis.yml'), '.travis.yml')
+  await fs.copy(path.resolve(__dirname, '../.husky'), '.husky')
 
   console.log()
   console.log(
