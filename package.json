@@ -1,6 +1,7 @@
 {
   "name": "automate-release",
   "description": "No more manual work in your software releases.",
+  "homepage": "https://nicedoc.io/kikobeats/automate-release",
   "version": "1.0.8",
   "main": "index.js",
   "bin": {
@@ -16,6 +17,13 @@
       "email": "josebalega@gmail.com"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/automate-release.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kikobeats/automate-release/issues"
+  },
   "keywords": [
     "automate",
     "automatic",
@@ -42,10 +50,10 @@
     "conventional-github-releaser": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
-    "husky": "latest",
     "lint-staged": "latest",
     "npm-check-updates": "latest",
     "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
     "standard-version": "latest"
@@ -58,10 +66,7 @@
   "scripts": {
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "lint": "standard-markdown && standard",
-    "postinstall": "husky install",
-    "postpublish": "pinst --enable",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
-    "prepublishOnly": "pinst --disable",
     "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
     "release": "standard-version -a",
@@ -81,11 +86,15 @@
     "package.json": [
       "finepack"
     ],
-    "*.js": [
+    "*.js,!*.min.js,": [
       "prettier-standard"
     ],
     "*.md": [
       "standard-markdown"
     ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx lint-staged"
   }
 }

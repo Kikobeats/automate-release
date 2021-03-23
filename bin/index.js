@@ -50,7 +50,7 @@ const install = async ({ cwd }) => {
       'devDependencies.conventional-github-releaser',
       'devDependencies.finepack',
       'devDependencies.git-authors-cli',
-      'devDependencies.husky',
+      'devDependencies.simple-git-hooks',
       'devDependencies.lint-staged',
       'devDependencies.npm-check-updates',
       'devDependencies.standard-version',
@@ -63,7 +63,8 @@ const install = async ({ cwd }) => {
       'scripts.release',
       'scripts.update:check',
       'scripts.update',
-      ['lint-staged', 'package.json']
+      'lint-staged',
+      'simple-git-hooks'
     ],
     key => {
       const value = get(rootPkg, key)
@@ -73,7 +74,6 @@ const install = async ({ cwd }) => {
 
   jsonFuture.save(pkgPath, pkg)
   await fs.copy(path.resolve(__dirname, '../.travis.yml'), '.travis.yml')
-  await fs.copy(path.resolve(__dirname, '../.husky'), '.husky')
 
   console.log()
   console.log(
