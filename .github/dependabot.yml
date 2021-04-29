@@ -1,0 +1,11 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: terminal-link
+    versions:
+    - 3.0.0
