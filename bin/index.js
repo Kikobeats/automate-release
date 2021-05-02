@@ -73,7 +73,11 @@ const install = async ({ cwd }) => {
   )
 
   jsonFuture.save(pkgPath, pkg)
-  await fs.copy(path.resolve(__dirname, '../.travis.yml'), '.travis.yml')
+
+  await Promise.all([
+    fs.copy(path.resolve(__dirname, '../.github'), '.github'),
+    fs.copy(path.resolve(__dirname, '../.travis.yml'), '.travis.yml')
+  ])
 
   console.log()
   console.log(
