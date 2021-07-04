@@ -202,7 +202,7 @@ For projects with a lot of activity, the condition could be a little bit more re
 
 The right place to do this is as part of our **Continuous Integration**.
 
-![](https://i.imgur.com/zEH4hA8.png)
+![](https://i.imgur.com/go4oZjJ.png)
 
 Every time a new Pull Request is merged in our `master` branch, our **Tests** will be executed to determinate if all is fine (nothing new here).
 
