@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/kikobeats/automate-release/compare/v1.0.10...v2.0.0) (2021-07-04)
+
+
+### Features
+
+* use GitHub Actions ([190f3a2](https://github.com/kikobeats/automate-release/commit/190f3a2388b1ebefbfb4cf407f82f1b4c7b4b0f6))
+
 ## 1.1.0 (2021-07-04)
 
 
