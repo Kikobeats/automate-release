@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.3 (2021-07-06)
+
+
+### Bug Fixes
+
+* relative path ([40e6fe4](https://github.com/kikobeats/automate-release/commit/40e6fe460d25a783d1718283008b938d696bb72d))
+
 ### 2.0.2 (2021-07-05)
 
 ### 2.0.1 (2021-07-04)
