@@ -26,4 +26,4 @@ const processError = err => {
   process.exit(1)
 }
 
-require('install')(cli.flags).catch(processError)
+require('./install')(cli.flags).catch(processError)
