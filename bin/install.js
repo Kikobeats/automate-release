@@ -2,8 +2,8 @@
 
 'use strict'
 
+const { white, red, gray } = require('picocolors')
 const { get, forEach, set } = require('lodash')
-const { white, red, gray } = require('chalk')
 const existsFile = require('exists-file')
 const jsonFuture = require('json-future')
 const link = require('terminal-link')
