@@ -35,7 +35,7 @@
   ],
   "dependencies": {
     "exists-file": "~3.0.2",
-    "fs-extra": "~10.0.0",
+    "fs-extra": "~10.1.0",
     "json-future": "~2.2.4",
     "lodash": "~4.17.19",
     "meow": "~9.0.0",
