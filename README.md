@@ -243,6 +243,7 @@ Just you need to recover the latest release and publish it on other channel usin
 
 #### Services
 
+- [release-notifier!](https://release-notifier.com/) - GitHub Release Notifications via E-mail or webhook (e.g. Rocket.chat channel)
 - [CodeRelease.io](https://coderelease.io) - GitHub Release Notifications on Your E-mail.
 - [IFTTT](https://ifttt.com) / [Zapier](https://zapier.com/) – For declaring using *RSS-to-Slack* recipes or similar.
 - [@github_releases_notify_bot](https://telegram.me/github_releases_notify_bot) – Telegram bot to receive release notifications.
