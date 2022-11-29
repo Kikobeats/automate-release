@@ -34,7 +34,8 @@ module.exports = async ({ cwd } = {}) => {
     [
       'commitlint.extends',
       'devDependencies',
-      'scripts.test',
+      'lint-staged',
+      'nano-staged',
       'scripts.contributors',
       'scripts.postinstall',
       'scripts.postrelease',
@@ -42,9 +43,9 @@ module.exports = async ({ cwd } = {}) => {
       'scripts.release:github',
       'scripts.release:tags',
       'scripts.release',
+      'scripts.test',
       'scripts.update:check',
       'scripts.update',
-      'lint-staged',
       'simple-git-hooks'
     ],
     key => {
