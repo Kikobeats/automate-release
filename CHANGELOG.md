@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.23 (2023-01-26)
+
+
+### Bug Fixes
+
+* add back coverage report ([a8a09b1](https://github.com/kikobeats/automate-release/commit/a8a09b1cc42b6ba4aa8c4e9e4d640379e8c2a2cf))
+
 ### 2.0.22 (2022-12-29)
 
 ### 2.0.21 (2022-12-22)
