@@ -47,6 +47,12 @@ jobs:
         run: npm install --no-package-lock
       - name: Test
         run: npm test
+      - name: Report
+        run: mkdir -p coverage && npx c8 report --reporter=text-lcov > coverage/lcov.info
+      - name: Coverage
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GH_TOKEN }}
