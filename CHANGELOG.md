@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 2.0.24 (2023-03-28)
+
+
+### Bug Fixes
+
+* don't run contributors as prerelease ([c787ca8](https://github.com/kikobeats/automate-release/commit/c787ca8ef2ff8dcd26bb30e8370bc75d20b3a2b2))
+
 ### 2.0.23 (2023-01-26)
 
 
