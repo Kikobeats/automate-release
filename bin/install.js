@@ -14,10 +14,8 @@ const rootPkg = require('../package.json')
 
 require('update-notifier')({ pkg: rootPkg }).notify()
 
-const processError = err => {
-  console.log(red(err.message || err))
-  process.exit(1)
-}
+const processError = error =>
+  console.log(red(error.message || error)) || process.exit(1)
 
 module.exports = async ({ cwd } = {}) => {
   const pkgPath = path.join(cwd, 'package.json')

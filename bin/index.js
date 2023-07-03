@@ -21,9 +21,7 @@ const cli = require('meow')({
   }
 })
 
-const processError = err => {
-  console.log(red(err.message || err))
-  process.exit(1)
-}
+const processError = error =>
+  console.log(red(error.message || error)) || process.exit(1)
 
 require('./install')(cli.flags).catch(processError)
