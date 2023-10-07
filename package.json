@@ -38,7 +38,6 @@
     "standard-version"
   ],
   "dependencies": {
-    "exists-file": "~3.0.2",
     "fs-extra": "~11.1.0",
     "json-future": "~2.2.4",
     "lodash": "~4.17.19",
@@ -88,7 +87,7 @@
     ]
   },
   "nano-staged": {
-    "*.js,!*.min.js": [
+    "*.js": [
       "prettier-standard",
       "standard --fix"
     ],

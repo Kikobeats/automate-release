@@ -4,7 +4,6 @@
 
 const { white, red, gray } = require('picocolors')
 const { get, forEach, set } = require('lodash')
-const existsFile = require('exists-file')
 const jsonFuture = require('json-future')
 const link = require('terminal-link')
 const fs = require('fs-extra')
@@ -20,7 +19,7 @@ const processError = error =>
 module.exports = async ({ cwd } = {}) => {
   const pkgPath = path.join(cwd, 'package.json')
 
-  if (!(await existsFile(pkgPath))) {
+  if (!(await fs.existsSync(pkgPath))) {
     return processError({
       message: 'First, you need to initialize `package.json`.'
     })
