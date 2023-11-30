@@ -38,7 +38,7 @@
     "standard-version"
   ],
   "dependencies": {
-    "fs-extra": "~11.1.0",
+    "fs-extra": "~11.2.0",
     "json-future": "~2.2.4",
     "lodash": "~4.17.19",
     "meow": "~9.0.0",
