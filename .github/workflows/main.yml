@@ -39,6 +39,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          fetch-depth: 2
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -52,7 +53,7 @@ jobs:
       - name: Test
         run: pnpm test
       - name: Report
-        run: mkdir -p coverage && npx c8 report --reporter=text-lcov > coverage/lcov.info
+        run: npx c8 report --reporter=text-lcov > coverage/lcov.info
       - name: Coverage
         uses: coverallsapp/github-action@main
         with:
