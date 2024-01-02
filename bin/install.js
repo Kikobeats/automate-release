@@ -106,5 +106,14 @@ module.exports = async ({ cwd } = {}) => {
     )
   )
   console.log()
+
+  console.log(gray(' And write permissions for GitHub Actions:\n'))
+
+  console.log(
+    gray(
+      '   - Actions > General > Workflow Permissions > Read and write permissions\n'
+    )
+  )
+
   console.log(gray(` Perform an \`${white('npm install')}\` to finish it.`))
 }
