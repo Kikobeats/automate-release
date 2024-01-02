@@ -2,7 +2,7 @@
   "name": "automate-release",
   "description": "No more manual work in your software releases.",
   "homepage": "https://github.com/kikobeats/automate-release",
-  "version": "2.0.32",
+  "version": "2.0.33",
   "main": "index.js",
   "bin": {
     "automate-release": "bin/index.js"
