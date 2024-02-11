@@ -176,7 +176,7 @@ We need to associate it as part of our `postrelease` script:
   "scripts": {
   "postrelease": "npm run release:tags && npm run release:github",
   "release": "standard-version",
-  "release:github": "conventional-github-releaser -p angular",
+  "release:github": "github-generate-release",
   "release:tags": "git push --follow-tags origin master"
   }
 }

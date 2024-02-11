@@ -115,5 +115,5 @@ module.exports = async ({ cwd } = {}) => {
     )
   )
 
-  console.log(gray(` Perform an \`${white('npm install')}\` to finish it.`))
+  console.log(gray(` Run \`${white('npm install')}\` to finish it.`))
 }
