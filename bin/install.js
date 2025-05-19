@@ -19,7 +19,7 @@ const processError = error =>
 module.exports = async ({ cwd } = {}) => {
   const pkgPath = path.join(cwd, 'package.json')
 
-  if (!(await fs.existsSync(pkgPath))) {
+  if (!fs.existsSync(pkgPath)) {
     return processError({
       message: 'First, you need to initialize `package.json`.'
     })
