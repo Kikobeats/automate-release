@@ -77,7 +77,7 @@
     "release:commit": "git add package.json CHANGELOG.md && git commit -m \"chore(release): $(node -p \"require('./package.json').version\")\"",
     "release:github": "github-generate-release",
     "release:tag": "git tag v$(node -p \"require('./package.json').version\")",
-    "release:tags": "git push --follow-tags origin HEAD:master",
+    "release:tags": "git push origin HEAD:master && git push --tags origin",
     "release:version": "standard-version --skip.changelog --skip.commit --skip.tag",
     "test": "c8 ava"
   },
