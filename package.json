@@ -38,12 +38,16 @@
     "standard-version"
   ],
   "dependencies": {
+    "dotenv": "~17.2.3",
     "fs-extra": "~11.3.0",
+    "github-create-secret": "~1.2.1",
     "json-future": "~2.2.4",
     "lodash": "~4.17.19",
     "meow": "~9.0.0",
+    "nanospinner": "~1.1.0",
     "picocolors": "~1.1.0",
     "terminal-link": "~2.1.1",
+    "tinyspawn": "~1.5.5",
     "update-notifier": "~5.1.0"
   },
   "devDependencies": {
@@ -60,7 +64,6 @@
     "nano-staged": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
-    "standard-markdown": "latest",
     "standard-version": "latest"
   },
   "files": [
@@ -69,7 +72,7 @@
   ],
   "scripts": {
     "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
-    "lint": "standard-markdown && standard",
+    "lint": "standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "pretest": "npm run lint",
     "release": "pnpm run release:version && pnpm run release:changelog && pnpm run release:commit && pnpm run release:tag",
@@ -96,9 +99,6 @@
     "*.js": [
       "prettier-standard",
       "standard --fix"
-    ],
-    "*.md": [
-      "standard-markdown"
     ],
     "package.json": [
       "finepack"

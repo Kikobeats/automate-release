@@ -11,6 +11,8 @@ const path = require('path')
 
 const rootPkg = require('../package.json')
 
+const highlight = command => `\`${white(command)}\``
+
 require('update-notifier')({ pkg: rootPkg }).notify()
 
 const processError = error =>
@@ -56,7 +58,6 @@ module.exports = async ({ cwd } = {}) => {
   )
 
   jsonFuture.save(pkgPath, pkg)
-
   await Promise.all([fs.copy(path.resolve(__dirname, '../.github'), '.github')])
 
   console.log()
@@ -67,7 +68,7 @@ module.exports = async ({ cwd } = {}) => {
           'automate-release',
           'https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/'
         )
-      )} installed 🎉.`
+      )} installed 🎉`
     )
   )
   console.log()
@@ -84,40 +85,44 @@ module.exports = async ({ cwd } = {}) => {
   console.log()
   console.log(
     gray(
-      `   - \`${white(
+      `   - ${highlight(
         link(
           'GIT_USERNAME',
           'https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git'
         )
-      )}\``
+      )}`
     )
   )
   console.log(
     gray(
-      `   - \`${white(
+      `   - ${highlight(
         link(
           'GIT_EMAIL',
           'https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address'
         )
-      )}\``
+      )}`
     )
   )
   console.log(
     gray(
-      `   - \`${white(
+      `   - ${highlight(
         link('NPM_TOKEN', 'https://github.com/bahmutov/ci-publish#how-to-use')
-      )}\``
+      )}`
     )
   )
   console.log()
-
-  console.log(gray(' And write permissions for GitHub Actions:\n'))
-
   console.log(
     gray(
-      '   - Actions > General > Workflow Permissions > Read and write permissions\n'
+      ` or write them in .envrc file and run ${highlight(
+        'automate-release ---tokens'
+      )}`
     )
   )
-
-  console.log(gray(` Run \`${white('npm install')}\` to finish it.`))
+  console.log()
+  console.log(gray(' Also, GitHub Actions write permissions are needed:\n'))
+  console.log(
+    gray(
+      '   - Actions > General > Workflow Permissions > Read and write permissions'
+    )
+  )
 }

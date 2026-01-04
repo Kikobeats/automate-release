@@ -1,6 +1,6 @@
 'use strict'
 
-const install = require('../bin/install')
+const install = require('../bin/init')
 const test = require('ava')
 
 test("throw an error if package.json doesn't exist", async t => {

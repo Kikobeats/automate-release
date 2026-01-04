@@ -17,6 +17,10 @@ const cli = require('meow')({
     cwd: {
       type: 'string',
       default: process.cwd()
+    },
+    tokens: {
+      type: 'boolean',
+      default: false
     }
   }
 })
@@ -24,4 +28,8 @@ const cli = require('meow')({
 const processError = error =>
   console.log(red(error.message || error)) || process.exit(1)
 
-require('./install')(cli.flags).catch(processError)
+if (cli.flags.tokens) {
+  require('./tokens')(cli.flags).catch(processError)
+} else {
+  require('./init')(cli.flags).catch(processError)
+}
