@@ -1,253 +1,76 @@
 <div align="center">
-	<img width="250" src="https://github.com/Kikobeats/automate-release/raw/master/media/logo.png" alt="Awesome">
-	<br>
-	<br>
+  <img width="150" src="https://github.com/Kikobeats/automate-release/raw/master/media/logo.png" alt="automate-release">
+  <br>
   <br>
 </div>
 
-> **TL;DR** Run `npx automate-release` 🎉.
+**automate-release** configures your project so that every commit pushed to the main branch triggers a new release automatically. No human factor is involved.
 
-A release might seem just an irrelevant number, but here you'll find why you should be using it.
+When you create a new project, the first thing you should do is:
 
-Release software is part of our developer day, but we tend to run it manually just we remember it, being a source of errors.
+```bash
+npx automate-release
+```
 
-Nowadays, we have the best tools to automate this task so let's use them.
+If you use [direnv](https://direnv.net/) with a `.envrc` file, you can also sync your local tokens to GitHub Secrets automatically:
 
-Your next release will be automatically doing:
+```bash
+GH_TOKEN=xxx npx automate-release --tokens
+```
 
-- [Follow a Git Commit Convention](#follow-a-git-commit-convention)
-  * [Commit Message Guidelines](#commit-message-guidelines)
-  * [Examples of Git Commits](#examples-of-git-commits)
-- [Determinate Next Version Based on History](#determinate-next-version-based-on-history)
-  * [GitHub Release](#github-release)
-- [Continous Release](#continous-release)
-  * [Release on CI/CD](#release-on-cicd)
-- [Communicate Your Changes](#communicate-your-changes)
-  * [Be Notified](#be-notified)
-  * [Publishing the Latest Release](#publishing-the-latest-release)
+This single command bootstraps your repository with the best practices for software releasing:
 
-Let me show you how to do it.
+https://github.com/user-attachments/assets/be26eb77-2ffd-46d1-9414-3ed063ece8fc
 
-## Follow a Git Commit Convention
+Releasing software is a fundamental part of our developer life, but we often do it manually, which is a source of errors and takes time away from what we love: coding.
 
-> **Tip**: You can use a different [convention configuration](https://github.com/marionebl/commitlint#shared-configuration).
+`automate-release` brings you:
 
-Using a `git commit` convention for our git messages help us all the messages of the contributors have a homogeneous appearance.
+- [Follow a git commit convention](#follow-a-git-commit-convention)
+- [History-driven releases](#history-driven-releases)
+- [Seamless GitHub integration](#seamless-github-integration)
 
-In addition, because we are going to use the same pattern for all the git messages, we can use that for do extra things, like for example, classify commits correctly at `CHANGELOG.md` or determinate what is the next version to release based on commit history.
+## Follow a git commit convention
 
-For ensuring all git messages follow the same pattern, We are going to use [commitlint](https://github.com/marionebl/commitlint) for linting git messages.
+Using a convention for git messages ensures that all contributors produce a homogeneous history. But it's not just about aesthetics; it's about **programmable history**.
+
+![](https://i.imgur.com/IxPIf84.png)
+
+By following a pattern, we can automatically classify commits in a `CHANGELOG.md` and determine the next version to release (patch, feature, or breaking change).
+
+![](https://i.imgur.com/oNbbWV9.png)
+
+`automate-release` sets up [commitlint](https://github.com/marionebl/commitlint) for that purpose:
 
 ![](https://i.imgur.com/nZOE5Vu.png)
 
-You can't do the commit until the format is valid: It'll force you to follow a strict format into your git messages.
+You won't be able to commit unless the format is valid. It follows the [conventional commits specification](https://conventional-commits.vercel.app/), which quickly becomes the backbone of your automation.
 
-<small>(Actually, you could bypass this step using the `--no-verify` option, but avoid do that).</small>
+## History-driven releases
 
-That's also a thing applicable to Pull Request title:
+As every commit pushed to the main branch will trigger a release, the next version is automatically determined based on your git history following [semver](https://semver.org/) rules:
 
-![](https://i.imgur.com/xfikguc.png)
-
-In that case, integrate [commitlintbot](https://github.com/paulirish/commitlintbot) with your git project to have the same effect.
-
-### Commit Message Guidelines
-
-> **Tip**: Read more on [Angular contribution guideline](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type).
-
-The git message must have a **type**. It could be:
-
-* **build**: Changes that affect the build system or external dependencies.
-* **ci**: Changes to our CI configuration files and scripts.
-* **docs**: Documentation only changes.
-* **feat**: A new feature.
-* **fix**: A bug fix.
-* **perf**: A code change that improves performance.
-* **refactor**: A code change that neither fixes a bug or adds a feature.
-* **style**: Changes that do not affect the meaning of the code.
-* **test**: Adding missing tests or correcting existing tests.
-
-I know. really, I know.
-
-The first time you use a convention for commits, you might think that it's **over-engineering**. 
-
-But, after use it a bit, it's **very helpful**, It makes easy read all the commits quickly or just focus in a determinate type of commits.
-
-### Examples of Git Commits
-
-All the following examples are usual and valid:
-
-```bash
-build: update dependencies
-ci: setup travis credentials
-refactor: move scripts
-fix: use user agent provided by parameters
-test: update snapshots
-style: use space instead of tabs
-```
-
-## Determinate Next Version Based on History
-
-Now that we have a `git commit` convention, we can jump in the next thing, that will make our first release 🎉.
-
-For do that, we are going to use [standard-version](https://github.com/conventional-changelog/standard-version). After reading your git history and it will determinate what is the next release version.
+- **patch** (`1.0.0` → `1.0.1`): When you commit a `fix`.
+- **minor** (`1.0.0` → `1.1.0`): When you commit a `feat`.
+- **major** (`1.0.0` → `2.0.0`): When you commit a `BREAKING CHANGE`.
 
 ![](https://i.imgur.com/nmfLfkC.png)
 
-[standard-version](https://github.com/conventional-changelog/standard-version) will determinate automagically the next version to release based on your `git history`.
+This automated process handles the tedious work of incrementing the version in `package.json`, generating the `CHANGELOG.md` entry, and creating the release commit and tag.
 
-For do that it will consider:
+## Seamless GitHub integration
 
-**patches** (`1.0.0` → `1.0.1`)
+The human factor in a release should be limited to being the trigger: just push your code. Everything else should be automated.
 
-```bash
-git commit -a -m "fix(parsing): fixed a bug in our parser"
-```
+`automate-release` deploys **GitHub Actions** that handle the entire workflow automatically:
 
-**features** (`1.0.0` → `1.1.0`)
+- **Reliability**: Tests are executed on every push to ensure stability before any release.
+- **Automation**: Contributors list is automatically updated and pushed back to the repository.
+- **Transparency**: Your `CHANGELOG.md` is synchronized with your **GitHub Releases**.
+- **Distribution**: The package is automatically published to the **NPM registry** once the release is tagged.
 
-```bash
-git commit -a -m "feat(parser): we now have a parser \o/"
-```
+![](https://i.imgur.com/vEXF1PF.png)
 
-**breaking changes** (`1.0.0` → `2.0.0`)
+A release is a commitment to your audience. `automate-release` ensures your users stay informed by reflecting your changes directly into the GitHub Release section, making your project look professional and transparent.
 
-```bash
-git commit -a -m "feat(new-parser): introduces a new parsing library
-BREAKING CHANGE: new library does not support foo-construct"
-```
-
-A release has some tasks associated:
-
-- 👉 Increment the version at `package.json`.
-- 👉 Generate a new entry in your `CHANGELOG.md`
-- 👉 Create a new specific git commit for the released version.
-- 👉 Create a new `git tag` with the version associated.
-
-In addition, GitHub usernames (`@kikobeats`) and issue references (`#133`) will be swapped out for the
-appropriate URLs in your `CHANGELOG.md`.
-
-A good practice is to put the command as `npm run release` script for performing the action.
-
-```json
-{
-  "scripts": {
-    "release": "standard-version",
-    "release:tags": "git push --follow-tags origin master",
-    "postrelease": "npm run release:tags"
-  }
-}
-```
-
-As you can see, we associated push things into your master remote branch.
-
-So, next time you want to do a release, just type `npm run release` (make sense, uh).
-
-![](https://i.imgur.com/AmOfMV9.png)
-
-The first time you released a version, a `CHANGELOG.md` will be created. Otherwise, it will append just the new released version:
-
-![](https://i.imgur.com/B2CoFsG.png)
-
-The `CHANGELOG.md` follows [Keep a Changelog](https://keepachangelog.com) specification. 
-
-
-You can write into it and your words will be preserved between versions.
-
-![](https://i.imgur.com/QOse3tZ.png)
-
-### GitHub Release
-
-GitHub (and GitLab too) has a special place into the repository for reflecting releases:
-
-![](https://i.imgur.com/butKsZ6.png)
-
-When you push a `git tag`, it will appear here, but nothing more. No text or changes associated.
-
-Now that we are generating a `CHANGELOG.md` it would be interesting to reflect the changes associated with each version.
-
-We can use a tool called [releaser-tools](https://github.com/conventional-changelog/releaser-tools) who will do exactly that, leaving our release section pretty 💅.
-
-> **Note**: Remember to setup [`CONVENTIONAL_GITHUB_RELEASER_TOKEN`](https://github.com/conventional-changelog/releaser-tools/tree/master/packages/conventional-github-releaser#setup-token-for-cli). You can use [direnv](https://direnv.net/) for declaring local development variables.
-
-We need to associate it as part of our `postrelease` script:
-
-```json
-{
-  "scripts": {
-  "postrelease": "npm run release:tags && npm run release:github",
-  "release": "standard-version",
-  "release:github": "github-generate-release",
-  "release:tags": "git push --follow-tags origin master"
-  }
-}
-```
-
-Next time, your metadata will be associated with the GitHub/GitLab release 🎉
-
-![](https://i.imgur.com/4Am8xIx.png)
-
-## Continous Release
-
-The human behavior in a release process should be very limited: we, as humans, just want to be the trigger for the next release.
-
-The rest of the things should be work in a boring and automated way 🤖.
-
-![](https://github.com/googleapis/release-please/raw/master/screen.png)
-
-Every commit that land on the `master` branch will mean that a new version of your software could be released.
-
-For projects with a lot of activity, the condition could be a little bit more relaxed; In that case, check [release-please](https://github.com/googleapis/release-please), where you have more control about when the next release will be shipped.
-
-### Release on CI/CD
-
-The right place to do this is as part of our **Continuous Integration**.
-
-![](https://i.imgur.com/go4oZjJ.png)
-
-Every time a new Pull Request is merged in our `master` branch, our **Tests** will be executed to determinate if all is fine (nothing new here).
-
-But now, after that, The **Release** stage will be executed, that will perform our `npm run release` command to complete the action.
-
-<div align="center">
-        <img src="https://i.imgur.com/7x6doze.jpg">
-        <div><smal>Have you noticed that? It's the sweet sensation of automation.</small></div>
-  <br>
-</div>
-
-That's specially helpful as maintainer if you are already have automated part of the process that uses services such as [Greenkeeper](https://greenkeeper.io) to keep your dependencies up to date, that create PR very often if you have many dependencies or they are updated very often (something that happens all the time at NPM ecosystem).
-
-You can see [.travis.yml](/.travis.yml) to see how it is done or just run `npx automate-release` to install it in your project folder.
-
-## Communicate Your Changes
-
-Releases also is a way to establish a compromise with your audience in order to know what's news.
-
-![](https://i.imgur.com/5vDpWJM.jpg)
-
-From [now](https://twitter.com/github/status/1067483957573373952) GitHub brings the ability to subscribe to any repository for getting notifications related with new versions.
-
-### Be Notified
-
-Alternatively, you can get release information from different sources and connect it with third party services using different ways.
-
-![](https://i.imgur.com/uXLNGtp.png)
-
-Just you need to recover the latest release and publish it on other channel using an intermediate service that connects it over Twitter, Slack or where your audience is.
-
-#### GitHub
-
-- [GitHub API](https://api.github.com/repos/Kikobeats/automate-release/releases/latest) – For recovering information per `owner_name/repo_name`.
-- [GitHub RSS Feed](https://github.com/Kikobeats/automate-release/releases.atom) – For getting atom feed per `owner_name/repo_name`.
-
-### Publishing the Latest Release
-
-#### Services
-
-- [release-notifier!](https://release-notifier.com/) - GitHub Release Notifications via E-mail or webhook (e.g. Rocket.chat channel)
-- [CodeRelease.io](https://coderelease.io) - GitHub Release Notifications on Your E-mail.
-- [IFTTT](https://ifttt.com) / [Zapier](https://zapier.com/) – For declaring using *RSS-to-Slack* recipes or similar.
-- [@github_releases_notify_bot](https://telegram.me/github_releases_notify_bot) – Telegram bot to receive release notifications.
-
-#### Self-Hosted
-
-- [tom.js.org](http://tom.js.org/) – A tiny microservice for sending notifications using multiple channels (Slack/Twitter/Telegram/Email).
+![](https://i.imgur.com/4Oen6QX.png)
