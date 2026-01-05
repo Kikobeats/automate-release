@@ -1,3 +1,9 @@
+## <small>2.1.2 (2026-01-05)</small>
+
+* fix: changelog ([30e3c05](https://github.com/kikobeats/automate-release/commit/30e3c05))
+
+
+
 ## <small>2.0.45 (2025-11-21)</small>
 
 * chore(release): 2.0.45 ([a23f663](https://github.com/kikobeats/automate-release/commit/a23f663))
