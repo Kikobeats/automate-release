@@ -76,7 +76,7 @@
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
     "pretest": "npm run lint",
     "release": "pnpm run release:version && pnpm run release:changelog && pnpm run release:commit && pnpm run release:tag",
-    "release:changelog": "conventional-changelog -i CHANGELOG.md",
+    "release:changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
     "release:commit": "git add package.json CHANGELOG.md && git commit -m \"chore(release): $(node -p \"require('./package.json').version\")\"",
     "release:github": "github-generate-release",
     "release:tag": "git tag -a v$(node -p \"require('./package.json').version\") -m \"v$(node -p \"require('./package.json').version\")\"",
