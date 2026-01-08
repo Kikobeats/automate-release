@@ -1,3 +1,9 @@
+## <small>2.1.3 (2026-01-08)</small>
+
+* fix: typo ([471dfe6](https://github.com/kikobeats/automate-release/commit/471dfe6))
+
+
+
 ## <small>2.1.2 (2026-01-05)</small>
 
 * fix: changelog ([30e3c05](https://github.com/kikobeats/automate-release/commit/30e3c05))
