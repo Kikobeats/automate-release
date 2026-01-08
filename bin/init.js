@@ -114,7 +114,7 @@ module.exports = async ({ cwd } = {}) => {
   console.log(
     gray(
       ` or write them in .envrc file and run ${highlight(
-        'automate-release ---tokens'
+        'automate-release --tokens'
       )}`
     )
   )
