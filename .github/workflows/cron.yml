@@ -1,31 +1,30 @@
-# name: cron
+name: cron
 
-# on:
-#   schedule:
-#     # Cron job every Monday at 12:00
-#     # https://crontab.guru/every-monday
-#     - cron: '0 0 * * MON'
+on:
+  schedule:
+    # Cron job every Monday at 12:00
+    # https://crontab.guru/every-monday
+    - cron: '0 0 * * MON'
 
-# jobs:
-#   test:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v5
-#         with:
-#           token: ${{ secrets.GH_TOKEN }}
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: lts/*
-#       - name: Setup PNPM
-#         uses: pnpm/action-setup@v4
-#         with:
-#           version: latest
-#           run_install: true
-#         run: npm install --no-package-lock
-#       - name: Cron
-#         run: |
-#           git config --global user.email ${{ secrets.GIT_EMAIL }}
-#           git config --global user.name ${{ secrets.GIT_USERNAME }}
-#           npm run cronjob
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: true
+      - name: Cron
+        run: |
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
+          git config --global user.name ${{ secrets.GIT_USERNAME }}
+          pnpm cronjob

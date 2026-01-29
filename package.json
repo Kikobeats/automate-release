@@ -56,7 +56,6 @@
     "@ksmithut/prettier-standard": "latest",
     "ava": "latest",
     "c8": "latest",
-    "ci-publish": "latest",
     "conventional-changelog-cli": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
@@ -71,11 +70,11 @@
     "bin"
   ],
   "scripts": {
-    "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "lint": "standard",
-    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
-    "pretest": "npm run lint",
-    "release": "pnpm run release:version && pnpm run release:changelog && pnpm run release:commit && pnpm run release:tag",
+    "postrelease": "pnpm release:tags && pnpm release:github && pnpm publish --access=public",
+    "pretest": "pnpm lint",
+    "release": "pnpm release:version && pnpm release:changelog && pnpm release:commit && pnpm release:tag",
     "release:changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
     "release:commit": "git add package.json CHANGELOG.md && git commit -m \"chore(release): $(node -p \"require('./package.json').version\")\"",
     "release:github": "github-generate-release",

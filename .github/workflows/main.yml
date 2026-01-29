@@ -19,11 +19,16 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: true
       - name: Contributors
         run: |
           git config --global user.email ${{ secrets.GIT_EMAIL }}
           git config --global user.name ${{ secrets.GIT_USERNAME }}
-          npm run contributors
+          pnpm contributors
       - name: Push changes
         run: |
           git push origin ${{ github.head_ref }}
@@ -65,4 +70,4 @@ jobs:
           git config --global user.email ${{ secrets.GIT_EMAIL }}
           git config --global user.name ${{ secrets.GIT_USERNAME }}
           git pull origin master
-          pnpm run release
+          pnpm release
