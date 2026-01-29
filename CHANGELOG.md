@@ -1,3 +1,9 @@
+## <small>2.1.4 (2026-01-29)</small>
+
+* chore: npm → pnpm ([5569829](https://github.com/kikobeats/automate-release/commit/5569829))
+
+
+
 ## <small>2.1.3 (2026-01-08)</small>
 
 * fix: typo ([471dfe6](https://github.com/kikobeats/automate-release/commit/471dfe6))
