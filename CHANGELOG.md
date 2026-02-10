@@ -1,3 +1,4 @@
+## 2.1.5 (2026-02-10)
 ## <small>2.1.4 (2026-01-29)</small>
 
 * chore: npm → pnpm ([5569829](https://github.com/kikobeats/automate-release/commit/5569829))
