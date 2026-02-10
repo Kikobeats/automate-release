@@ -2,7 +2,7 @@
 
 'use strict'
 
-const { red } = require('picocolors')
+const { red } = require('./colors')
 const fs = require('fs-extra')
 const path = require('path')
 

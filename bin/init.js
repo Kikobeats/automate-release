@@ -2,7 +2,7 @@
 
 'use strict'
 
-const { white, red, gray } = require('picocolors')
+const { white, red, gray } = require('./colors')
 const { get, forEach, set } = require('lodash')
 const jsonFuture = require('json-future')
 const link = require('terminal-link')
