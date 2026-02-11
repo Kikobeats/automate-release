@@ -1,3 +1,8 @@
+## 2.1.6 (2026-02-11)
+
+### Bug Fixes
+
+* add ci-publish back ([9708a17](https://github.com/kikobeats/automate-release/commit/9708a17f4d825aa07e6220ba3859ba449563e60c))
 ## 2.1.5 (2026-02-10)
 ## <small>2.1.4 (2026-01-29)</small>
 
