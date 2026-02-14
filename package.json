@@ -38,7 +38,7 @@
     "standard-version"
   ],
   "dependencies": {
-    "dotenv": "~17.2.3",
+    "dotenv": "~17.3.1",
     "fs-extra": "~11.3.0",
     "github-create-secret": "~1.2.1",
     "json-future": "~2.2.4",
