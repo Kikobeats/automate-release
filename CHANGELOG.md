@@ -1,3 +1,8 @@
+## 2.1.8 (2026-03-05)
+
+### Bug Fixes
+
+* use quotes ([e62bf45](https://github.com/kikobeats/automate-release/commit/e62bf45af5e3d12514dc10a03c052ff7c371b357))
 ## 2.1.7 (2026-02-14)
 ## 2.1.6 (2026-02-11)
 
