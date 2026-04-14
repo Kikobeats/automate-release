@@ -6,6 +6,9 @@ on:
     # https://crontab.guru/every-monday
     - cron: '0 0 * * MON'
 
+env:
+  SKIP_INSTALL_SIMPLE_GIT_HOOKS: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,7 +26,7 @@ jobs:
         with:
           version: latest
       - name: Install
-        run: pnpm install --ignore-scripts
+        run: pnpm install
       - name: Cron
         run: |
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
