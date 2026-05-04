@@ -1,34 +1,34 @@
-name: cron
+# name: cron
 
-on:
-  schedule:
-    # Cron job every Monday at 12:00
-    # https://crontab.guru/every-monday
-    - cron: '0 0 * * MON'
+# on:
+#   schedule:
+#     # Cron job every Monday at 12:00
+#     # https://crontab.guru/every-monday
+#     - cron: '0 0 * * MON'
 
-env:
-  SKIP_INSTALL_SIMPLE_GIT_HOOKS: true
+# env:
+#   SKIP_INSTALL_SIMPLE_GIT_HOOKS: true
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: lts/*
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v6
-        with:
-          version: latest
-      - name: Install
-        run: pnpm install --dangerously-allow-all-builds
-      - name: Cron
-        run: |
-          git config --global user.email "${{ secrets.GIT_EMAIL }}"
-          git config --global user.name "${{ secrets.GIT_USERNAME }}"
-          pnpm cronjob
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v6
+#         with:
+#           token: ${{ secrets.GH_TOKEN }}
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v6
+#         with:
+#           node-version: lts/*
+#       - name: Setup PNPM
+#         uses: pnpm/action-setup@v6
+#         with:
+#           version: latest
+#       - name: Install
+#         run: pnpm install --dangerously-allow-all-builds
+#       - name: Cron
+#         run: |
+#           git config --global user.email "${{ secrets.GIT_EMAIL }}"
+#           git config --global user.name "${{ secrets.GIT_USERNAME }}"
+#           pnpm cronjob
