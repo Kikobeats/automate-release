@@ -80,4 +80,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm release
+        run: |
+          if git log -1 --format='%s' | grep -qE '^chore\(release\)'; then
+            echo "tip is already a release commit — nothing to publish"
+            exit 0
+          fi
+          pnpm release
