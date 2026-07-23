@@ -61,13 +61,13 @@ jobs:
         uses: pnpm/action-setup@v6
         with:
           version: latest
-      - name: Install
-        run: pnpm install --dangerously-allow-all-builds
       - name: Sync master
         run: |
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git pull origin master
+      - name: Install
+        run: pnpm install --dangerously-allow-all-builds
       - name: Test
         run: pnpm test
       - name: Report
