@@ -1,6 +1,6 @@
 {
   "name": "automate-release",
-  "description": "No more manual work in your software releases.",
+  "description": "Automate npm releases with conventional commits, changelog generation, and standard-version workflows.",
   "homepage": "https://github.com/kikobeats/automate-release",
   "version": "2.1.12",
   "main": "index.js",
@@ -30,11 +30,14 @@
   },
   "keywords": [
     "automate",
-    "automatic",
     "changelog",
+    "ci",
     "commitlint",
-    "conventional",
+    "conventional-commits",
+    "npm",
+    "publish",
     "release",
+    "semver",
     "standard-version"
   ],
   "dependencies": {
