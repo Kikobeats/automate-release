@@ -7,6 +7,7 @@
 #     - cron: '0 0 * * MON'
 
 # env:
+#   pnpm_config_dangerously_allow_all_builds: true
 #   SKIP_INSTALL_SIMPLE_GIT_HOOKS: true
 
 # jobs:
@@ -26,7 +27,7 @@
 #         with:
 #           version: latest
 #       - name: Install
-#         run: pnpm install --dangerously-allow-all-builds
+#         run: pnpm install
 #       - name: Cron
 #         run: |
 #           git config --global user.email "${{ secrets.GIT_EMAIL }}"
